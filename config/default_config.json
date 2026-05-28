@@ -2,20 +2,25 @@
   "capture": {
     "region": null,
     "interval_ms": 500,
+    "min_region_size": 10,
     "preprocessing": {
       "grayscale": true,
       "contrast_factor": 2.5,
-      "binarize_threshold": 180
+      "binarize_threshold": 180,
+      "contrast_percentiles": [5, 95]
     }
   },
   "ocr": {
     "engine": "winrt",
-    "language": "auto"
+    "language": "zh-Hans-CN",
+    "target_height": 360
   },
   "translate": {
     "target_language": "zh",
     "primary_engine": "volcengine",
     "fallback_engine": "baidu",
+    "cache_max": 500,
+    "cache_ttl_sec": 600,
     "volcengine": {
       "app_id": "",
       "app_key": "",
@@ -27,17 +32,26 @@
       "endpoint": "https://fanyi-api.baidu.com/api/trans/vip/translate"
     }
   },
+  "cache": {
+    "max_size": 1000,
+    "ttl_sec": 30.0
+  },
   "overlay": {
     "font_size": 14,
     "opacity": 0.9,
     "display_duration_sec": 5,
     "fade_duration_sec": 1.0,
-    "max_messages": 10
+    "max_messages": 10,
+    "overlay_height": 200,
+    "overlay_gap": 5,
+    "animation_interval_ms": 200,
+    "bg_color": "rgba(0, 0, 0, 150)"
   },
   "hotkeys": {
     "manual_translate": "ctrl+t",
     "input_helper": "ctrl+shift+t",
-    "exit": "ctrl+q"
+    "exit": "ctrl+q",
+    "move_overlay": "ctrl+m"
   },
   "general": {
     "first_run": true,

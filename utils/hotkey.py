@@ -9,9 +9,12 @@ class HotkeyManager:
         self._callbacks = {}
 
     def register(self, hotkey: str, callback):
-        self._callbacks[hotkey] = callback
-        keyboard.add_hotkey(hotkey, callback, suppress=False)
-        logger.info("Registered hotkey: %s", hotkey)
+        try:
+            self._callbacks[hotkey] = callback
+            keyboard.add_hotkey(hotkey, callback, suppress=False)
+            logger.info("Registered hotkey: %s", hotkey)
+        except Exception as e:
+            logger.warning("Failed to register hotkey %s: %s", hotkey, e)
 
     def unregister_all(self):
         try:

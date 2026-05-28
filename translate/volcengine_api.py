@@ -32,6 +32,7 @@ class VolcengineTranslator:
             self._host = parsed.hostname or DEFAULT_HOST
         else:
             self._host = DEFAULT_HOST
+        self._session = requests.Session()
 
     def translate(self, text: str, source: str = "auto", target: str = "zh") -> str | None:
         if not self.app_id or not self.app_key:
@@ -87,7 +88,7 @@ class VolcengineTranslator:
             headers["Authorization"] = auth
 
             url = f"https://{self._host}{PATH}?{sorted_query}"
-            resp = requests.post(url, headers=headers, data=body_bytes, timeout=5)
+            resp = self._session.post(url, headers=headers, data=body_bytes, timeout=5)
             resp.raise_for_status()
 
             result = resp.json()

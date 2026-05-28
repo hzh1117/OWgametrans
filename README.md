@@ -91,17 +91,42 @@ OWGameTrans/
 └── utils/                     # 工具函数
 ```
 
-### 安全说明
+### 反作弊合规声明
 
-本工具采用纯 OCR + 透明叠加窗口方案：
+**本工具不与守望先锋游戏进程进行任何交互。** 技术实现如下：
 
-- 不读取游戏进程内存
-- 不注入 DLL 或 Hook API
-- 不修改游戏文件
-- 不枚举游戏窗口句柄
-- 屏幕捕获使用与 OBS/Discord 相同的 GDI BitBlt API
+1. **截图方式**：使用 [mss](https://github.com/BoboTiG/python-mss) 库（底层 Windows BitBlt API）从桌面合成器（DWM）的输出缓冲区复制像素。不读取游戏进程内存，不注入 DLL，不 Hook 游戏渲染管线。此方式与 OBS Studio 的窗口采集原理相同。
 
-从反作弊系统角度看，本工具与屏幕录制软件无区别。
+2. **OCR 识别**：使用 Windows 原生 OCR 引擎（Windows.Media.Ocr）对截图进行文字识别，纯离线处理，不上传图像数据。
+
+3. **翻译显示**：使用 PyQt6 创建透明悬浮窗口（`WindowTransparentForInput` + `WindowStaysOnTopHint`），不与游戏窗口交互，不拦截游戏输入。
+
+4. **热键方式**：使用 `keyboard` 库（底层 `WH_KEYBOARD_LL` 低级键盘钩子）注册全局快捷键。这是 Windows 标准 API。
+
+**反作弊合规性**：
+- 不读取游戏进程内存（无 `OpenProcess`/`ReadProcessMemory`）
+- 不注入 DLL 到游戏进程（无 `CreateRemoteThread`）
+- 不 Hook DirectX/OpenGL 渲染管线
+- 不使用 Cheat Engine 类技术
+- 不加载内核驱动
+
+**已知限制**：
+- 如果游戏以管理员权限运行，请以管理员权限启动本工具（否则热键可能失效）
+- 需要安装对应语言的 Windows OCR 语言包（设置 → 时间和语言 → 语言）
+
+### 病毒误报说明
+
+打包后的 exe 可能被 Windows Defender 或其他杀毒软件误报为病毒。这是 Python 打包工具（PyInstaller）的已知问题，非本工具独有。
+
+**解决方法**：
+1. 打开 Windows 安全中心 → 病毒和威胁防护 → 管理设置
+2. 在"排除项"中添加本工具所在文件夹
+3. 或在 PowerShell 中执行：
+   ```powershell
+   Add-MpExclusion -Path "C:\path\to\OWGameTrans"
+   ```
+
+本工具源码完全开源，不包含任何恶意代码。
 
 ### 许可证
 

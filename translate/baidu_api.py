@@ -18,6 +18,7 @@ class BaiduTranslator:
         self.app_key = app_key
         self._endpoint = endpoint or DEFAULT_ENDPOINT
         self._next_allowed = 0.0
+        self._session = requests.Session()
 
     def translate(self, text: str, source: str = "auto", target: str = "zh") -> str | None:
         if not self.app_id or not self.app_key:
@@ -42,7 +43,7 @@ class BaiduTranslator:
                 "sign": sign,
             }
 
-            resp = requests.post(self._endpoint, data=data, timeout=5)
+            resp = self._session.post(self._endpoint, data=data, timeout=5)
             self._next_allowed = time.monotonic() + MIN_INTERVAL
             resp.raise_for_status()
             result = resp.json()

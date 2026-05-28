@@ -4,14 +4,20 @@ from dataclasses import dataclass
 
 logger = logging.getLogger("gametrans.parser")
 
-PATTERN = re.compile(
-    r"(?:\[(?P<channel>\w+)\]\s*)?(?P<player>\S+):\s*(?P<message>.+)",
-    re.IGNORECASE,
+OVERWATCH_CHAT_PATTERN = re.compile(
+    r"^\s*"
+    r"(?:\[(?P<timestamp>\d{1,2}:\d{2})\]\s*)?"
+    r"(?:\[(?P<channel>[^\]]+)\]\s*)?"
+    r"(?P<player>[^\s:\[\]]+)"
+    r"\s*:\s*"
+    r"(?P<message>.+)",
+    re.DOTALL,
 )
 
 
 @dataclass
 class ChatMessage:
+    timestamp: str | None
     channel: str | None
     player: str
     message: str
@@ -24,12 +30,22 @@ def parse_messages(text: str) -> list[ChatMessage]:
         line = line.strip()
         if not line:
             continue
-        m = PATTERN.match(line)
+
+        m = OVERWATCH_CHAT_PATTERN.match(line)
         if m:
             messages.append(ChatMessage(
+                timestamp=m.group("timestamp"),
                 channel=m.group("channel"),
                 player=m.group("player"),
                 message=m.group("message").strip(),
                 raw=line,
             ))
+        else:
+            # Continuation line: no timestamp/channel/player, append to previous message
+            if messages and not re.search(r"\[.*?\].*?:", line):
+                messages[-1].message += " " + line
+                messages[-1].raw += "\n" + line
+            else:
+                logger.debug("Unmatched line: %s", line[:80])
+
     return messages

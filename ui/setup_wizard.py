@@ -1,8 +1,7 @@
-import sys
 import logging
 from PyQt6.QtWidgets import (
-    QApplication, QWidget, QVBoxLayout, QLabel, QPushButton,
-    QComboBox, QHBoxLayout, QMessageBox
+    QWidget, QVBoxLayout, QLabel, QPushButton,
+    QComboBox, QHBoxLayout, QApplication
 )
 from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QFont
@@ -17,8 +16,11 @@ logger = logging.getLogger("gametrans.ui")
 class SetupWizard(QWidget):
     def __init__(self):
         super().__init__()
+        settings = get_settings()
+        w = settings.get("ui", "wizard_width", default=420)
+        h = settings.get("ui", "wizard_height", default=300)
         self.setWindowTitle("GameTrans - 首次设置")
-        self.setFixedSize(420, 300)
+        self.setFixedSize(w, h)
         self.setWindowFlags(Qt.WindowType.WindowStaysOnTopHint)
 
         layout = QVBoxLayout()
@@ -89,11 +91,3 @@ class SetupWizard(QWidget):
         settings.set_many(items)
         logger.info("Setup complete: target=%s, region=%s", target, self._selected_region)
         self.close()
-
-
-def run_setup_wizard():
-    app = QApplication.instance() or QApplication(sys.argv)
-    wizard = SetupWizard()
-    wizard.show()
-    app.exec()
-    return wizard._selected_region

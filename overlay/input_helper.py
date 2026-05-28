@@ -50,15 +50,19 @@ class InputHelper(QWidget):
         if not text:
             return
 
-        result = self._engine.translate_with_retry(text, source="zh")
-        if result:
-            clipboard = QApplication.clipboard()
-            clipboard.setText(result)
-            self._label.setText(f"已复制: {result}")
-            self.translated.emit(result)
-            logger.info("Translated: %s -> %s", text[:30], result[:30])
-        else:
-            self._label.setText("翻译失败，请重试")
+        try:
+            result = self._engine.translate_with_retry(text, source="zh")
+            if result:
+                clipboard = QApplication.clipboard()
+                clipboard.setText(result)
+                self._label.setText(f"已复制: {result}")
+                self.translated.emit(result)
+                logger.info("Translated: %s -> %s", text[:30], result[:30])
+            else:
+                self._label.setText("翻译失败，请重试")
+        except Exception as e:
+            logger.warning("Translation error: %s", e)
+            self._label.setText("翻译出错")
 
         self._input.clear()
 

@@ -3,6 +3,8 @@ from PyQt6.QtWidgets import QWidget, QApplication
 from PyQt6.QtCore import Qt, QRect, QPoint, QEventLoop
 from PyQt6.QtGui import QPainter, QColor, QPen, QCursor
 
+from config.settings import get_settings
+
 logger = logging.getLogger("gametrans.overlay")
 
 
@@ -24,7 +26,10 @@ class RegionSelector(QWidget):
 
     def showEvent(self, event):
         super().showEvent(event)
-        screen = QApplication.primaryScreen()
+        cursor_pos = QCursor.pos()
+        screen = QApplication.screenAt(cursor_pos)
+        if screen is None:
+            screen = QApplication.primaryScreen()
         if screen:
             self.setGeometry(screen.geometry())
 
@@ -55,7 +60,8 @@ class RegionSelector(QWidget):
         if event.button() == Qt.MouseButton.LeftButton and self._selecting:
             self._selecting = False
             rect = QRect(self._start, self._end).normalized()
-            if rect.width() > 10 and rect.height() > 10:
+            min_size = get_settings().get("capture", "min_region_size", default=10)
+            if rect.width() > min_size and rect.height() > min_size:
                 self._result = (rect.x(), rect.y(), rect.width(), rect.height())
                 self.close()
             else:
@@ -71,13 +77,17 @@ class RegionSelector(QWidget):
 
 
 def select_region() -> tuple[int, int, int, int] | None:
-    selector = RegionSelector()
-    selector.showFullScreen()
-    selector.raise_()
-    selector.activateWindow()
+    try:
+        selector = RegionSelector()
+        selector.showFullScreen()
+        selector.raise_()
+        selector.activateWindow()
 
-    loop = QEventLoop()
-    selector.destroyed.connect(loop.quit)
-    loop.exec()
+        loop = QEventLoop()
+        selector.destroyed.connect(loop.quit)
+        loop.exec()
 
-    return selector.get_region()
+        return selector.get_region()
+    except Exception as e:
+        logger.warning("Region selection failed: %s", e)
+        return None

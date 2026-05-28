@@ -15,8 +15,11 @@ logger = logging.getLogger("gametrans.ui")
 class SettingsWindow(QWidget):
     def __init__(self):
         super().__init__()
+        settings = get_settings()
+        w = settings.get("ui", "settings_width", default=450)
+        h = settings.get("ui", "settings_height", default=550)
         self.setWindowTitle("GameTrans - 设置")
-        self.setFixedSize(450, 550)
+        self.setFixedSize(w, h)
         self.setWindowFlags(Qt.WindowType.WindowStaysOnTopHint)
 
         layout = QVBoxLayout()
@@ -85,6 +88,17 @@ class SettingsWindow(QWidget):
         self._max_msgs.setValue(settings.get("overlay", "max_messages", default=10))
         overlay_layout.addRow("最大消息数:", self._max_msgs)
 
+        self._overlay_height = QSpinBox()
+        self._overlay_height.setRange(80, 400)
+        self._overlay_height.setValue(settings.get("overlay", "overlay_height", default=200))
+        overlay_layout.addRow("悬浮窗高度:", self._overlay_height)
+
+        self._anim_interval = QSpinBox()
+        self._anim_interval.setRange(50, 1000)
+        self._anim_interval.setSuffix(" ms")
+        self._anim_interval.setValue(settings.get("overlay", "animation_interval_ms", default=200))
+        overlay_layout.addRow("动画刷新间隔:", self._anim_interval)
+
         overlay_group.setLayout(overlay_layout)
         layout.addWidget(overlay_group)
 
@@ -112,6 +126,8 @@ class SettingsWindow(QWidget):
             (("overlay", "opacity"), self._opacity.value()),
             (("overlay", "display_duration_sec"), self._duration.value()),
             (("overlay", "max_messages"), self._max_msgs.value()),
+            (("overlay", "overlay_height"), self._overlay_height.value()),
+            (("overlay", "animation_interval_ms"), self._anim_interval.value()),
         ]
 
         if self._volc_id.text().strip():

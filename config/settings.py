@@ -1,5 +1,9 @@
 import json
+import logging
+import time
 from pathlib import Path
+
+logger = logging.getLogger("gametrans.config")
 
 CONFIG_DIR = Path(__file__).parent
 DEFAULT_CONFIG = CONFIG_DIR / "default_config.json"
@@ -9,19 +13,32 @@ USER_CONFIG = CONFIG_DIR / "user_config.json"
 class Settings:
     def __init__(self):
         self._data = {}
+        self._last_mtime = 0.0
+        self._callbacks = []
         self.load()
 
     def load(self):
-        with open(DEFAULT_CONFIG, "r", encoding="utf-8") as f:
-            self._data = json.load(f)
+        try:
+            with open(DEFAULT_CONFIG, "r", encoding="utf-8") as f:
+                self._data = json.load(f)
+        except (json.JSONDecodeError, FileNotFoundError, PermissionError, OSError) as e:
+            logger.error("Failed to load default config: %s, using empty config", e)
+            self._data = {}
+
         if USER_CONFIG.exists():
-            with open(USER_CONFIG, "r", encoding="utf-8") as f:
-                user = json.load(f)
-            self._deep_merge(self._data, user)
+            try:
+                with open(USER_CONFIG, "r", encoding="utf-8") as f:
+                    user = json.load(f)
+                self._deep_merge(self._data, user)
+            except (json.JSONDecodeError, PermissionError, OSError) as e:
+                logger.warning("Failed to load user config: %s, using defaults only", e)
 
     def save(self):
-        with open(USER_CONFIG, "w", encoding="utf-8") as f:
-            json.dump(self._data, f, indent=2, ensure_ascii=False)
+        try:
+            with open(USER_CONFIG, "w", encoding="utf-8") as f:
+                json.dump(self._data, f, indent=2, ensure_ascii=False)
+        except (PermissionError, OSError) as e:
+            logger.warning("Failed to save user config: %s", e)
 
     def get(self, *keys, default=None):
         obj = self._data
@@ -65,6 +82,29 @@ class Settings:
     @property
     def data(self):
         return self._data
+
+    def on_change(self, callback):
+        self._callbacks.append(callback)
+
+    def check_reload(self):
+        if not USER_CONFIG.exists():
+            return
+        try:
+            mtime = USER_CONFIG.stat().st_mtime
+            if mtime > self._last_mtime:
+                self._last_mtime = mtime
+                old_data = json.dumps(self._data, sort_keys=True)
+                self.load()
+                new_data = json.dumps(self._data, sort_keys=True)
+                if old_data != new_data:
+                    logger.info("User config reloaded")
+                    for cb in self._callbacks:
+                        try:
+                            cb(self._data)
+                        except Exception as e:
+                            logger.warning("Config change callback error: %s", e)
+        except OSError:
+            pass
 
 
 _settings = None

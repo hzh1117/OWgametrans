@@ -13,6 +13,7 @@ env/
 # Config
 .env
 config/user_config.json
+cache/translation_cache.json
 
 # Logs
 *.log
@@ -29,6 +30,9 @@ logs/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Docs
+docs/
 
 # Claude
 .claude/
