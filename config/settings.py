@@ -66,10 +66,14 @@ class Settings:
 
     def set_many(self, items: list[tuple]):
         """Batch set multiple key-value pairs and save once.
-        items: list of tuples, each being (*keys, value)
+        items: list of (keys_tuple, value) or (*keys, value) tuples.
         """
         for item in items:
-            self.set(*item)
+            if len(item) == 2 and isinstance(item[0], tuple):
+                keys, value = item
+                self.set(*keys, value)
+            else:
+                self.set(*item)
         self.save()
 
     def _deep_merge(self, base, override):

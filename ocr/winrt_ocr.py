@@ -17,7 +17,7 @@ class WinrtOCR:
 
         self._lang = ocr_cfg.get("language", "auto")
         if self._lang == "auto":
-            self._lang = "zh-Hans-CN"
+            self._lang = "en"
 
         percentiles = capture_cfg.get("contrast_percentiles", [5, 95])
         self._contrast_percentiles = tuple(percentiles)
@@ -90,7 +90,25 @@ class WinrtOCR:
         t1 = time.perf_counter()
 
         result = winocr.recognize_pil_sync(img, lang=self._lang)
-        text = getattr(result, "text", "") or ""
+
+        # Handle dict result from winocr
+        if isinstance(result, dict):
+            text = result.get("text", "") or ""
+        else:
+            text = getattr(result, "text", "") or ""
+
+        # Fallback: try with grayscale if binarized image fails
+        if not text:
+            gray_rgb = Image.fromarray(stretched, mode="L").convert("RGB")
+            result2 = winocr.recognize_pil_sync(gray_rgb, lang=self._lang)
+            if isinstance(result2, dict):
+                text2 = result2.get("text", "") or ""
+            else:
+                text2 = getattr(result2, "text", "") or ""
+            if text2:
+                logger.info("OCR fallback (grayscale) succeeded: %s", text2[:50])
+                text = text2
+                img = gray_rgb
         t2 = time.perf_counter()
 
         total_ms = (t2 - t0) * 1000

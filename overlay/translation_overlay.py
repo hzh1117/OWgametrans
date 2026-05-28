@@ -76,6 +76,11 @@ class TranslationOverlay(QWidget):
         self._layout.setSpacing(2)
         self.setLayout(self._layout)
 
+        self._status_label = QLabel("GameTrans 就绪 - 等待聊天消息...")
+        self._status_label.setFont(QFont(FONT_FAMILY, self._font_size - 2))
+        self._status_label.setStyleSheet("color: red; padding: 2px 6px;")
+        self._layout.addWidget(self._status_label)
+
         animation_interval = config.get("animation_interval_ms", 200)
         self._timer = QTimer()
         self._timer.timeout.connect(self._update_display)
@@ -83,6 +88,8 @@ class TranslationOverlay(QWidget):
 
     def add_message(self, player: str, original: str, translated: str):
         try:
+            if self._status_label.isVisible():
+                self._status_label.hide()
             msg = TranslatedMessage(player=player, original=original, translated=translated)
             label = self._create_label(msg)
             self._entries.append((msg, label))
@@ -95,14 +102,14 @@ class TranslationOverlay(QWidget):
 
     def _create_label(self, msg: TranslatedMessage) -> QLabel:
         label = QLabel(f"[{msg.player}] {msg.translated}")
-        label.setFont(QFont(FONT_FAMILY, self._font_size))
+        label.setFont(QFont(FONT_FAMILY, self._font_size - 2))
         label.setStyleSheet(self._style_for(msg.opacity))
         self._layout.addWidget(label)
         return label
 
     def _style_for(self, opacity: float) -> str:
         return (
-            f"color: rgba(255, 255, 255, {int(opacity * 255)});"
+            f"color: rgba(0, 255, 0, {int(opacity * 255)});"
             f"background-color: {self._bg_color};"
             "padding: 2px 6px; border-radius: 3px;"
         )
@@ -121,6 +128,9 @@ class TranslationOverlay(QWidget):
         for i in reversed(to_remove):
             _, label = self._entries.pop(i)
             label.deleteLater()
+
+        if not self._entries and not self._status_label.isVisible():
+            self._status_label.show()
 
     def enable_drag(self):
         self.setWindowFlags(

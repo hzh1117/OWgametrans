@@ -83,6 +83,7 @@ class GameTransApp:
 
     def _run_setup(self):
         wizard = SetupWizard()
+        wizard.finished.connect(lambda: self.app.quit())
         wizard.show()
         self.app.exec()
         self._load_region()
@@ -102,13 +103,16 @@ class GameTransApp:
         logger.info("[%s] translated %d chars", player, len(message))
 
     def _start_ocr_loop(self):
+        logger.info("Initializing OCR engine...")
         self.ocr.initialize()
+        logger.info("OCR engine ready")
 
         overlay_cfg = self.settings.get("overlay", default={})
         region = self.capture.get_region()
         if region:
+            logger.info("Creating overlay for region: %s", region)
             self.overlay = TranslationOverlay(
-                (region["x"], region["y"], region["width"], region["height"]),
+                (region["left"], region["top"], region["width"], region["height"]),
                 overlay_cfg,
             )
             # Restore saved position
@@ -116,8 +120,11 @@ class GameTransApp:
             if saved_pos:
                 self.overlay.move(saved_pos["x"], saved_pos["y"])
             self.overlay.show()
+            logger.info("Overlay shown")
 
+        logger.info("Starting translation worker...")
         self._start_translation_worker()
+        logger.info("Translation worker started")
 
         self._timer = QTimer()
         self._timer.timeout.connect(self._ocr_tick)
@@ -244,8 +251,14 @@ class GameTransApp:
             logger.error("No region selected, exiting")
             return
 
-        self._start_ocr_loop()
+        logger.info("Region ready, starting OCR loop...")
+        try:
+            self._start_ocr_loop()
+        except Exception as e:
+            logger.error("Failed to start OCR loop: %s", e, exc_info=True)
+            return
 
+        logger.info("OCR loop started, registering hotkeys...")
         hotkeys = self.settings.get("hotkeys", default={})
         self.hotkey_mgr.register(
             hotkeys.get("manual_translate", "ctrl+t"),

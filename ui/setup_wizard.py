@@ -3,7 +3,7 @@ from PyQt6.QtWidgets import (
     QWidget, QVBoxLayout, QLabel, QPushButton,
     QComboBox, QHBoxLayout, QApplication
 )
-from PyQt6.QtCore import Qt
+from PyQt6.QtCore import Qt, pyqtSignal
 from PyQt6.QtGui import QFont
 
 from config.settings import get_settings
@@ -14,6 +14,8 @@ logger = logging.getLogger("gametrans.ui")
 
 
 class SetupWizard(QWidget):
+    finished = pyqtSignal()
+
     def __init__(self):
         super().__init__()
         settings = get_settings()
@@ -90,4 +92,5 @@ class SetupWizard(QWidget):
             }))
         settings.set_many(items)
         logger.info("Setup complete: target=%s, region=%s", target, self._selected_region)
+        self.finished.emit()
         self.close()
