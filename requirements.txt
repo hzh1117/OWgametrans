@@ -1,0 +1,8 @@
+mss>=9.0.0
+numpy>=1.26.0
+PyQt6>=6.6.0
+requests>=2.31.0
+keyboard>=0.13.5
+Pillow>=10.0.0
+winocr>=0.0.15
+pyinstaller>=6.0.0
