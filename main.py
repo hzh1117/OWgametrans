@@ -200,6 +200,10 @@ class GameTransApp:
             hotkeys.get("input_helper", "ctrl+shift+t"),
             self._show_input_helper,
         )
+        self.hotkey_mgr.register(
+            hotkeys.get("exit", "ctrl+q"),
+            self._exit,
+        )
 
         self.tray = create_tray_icon(
             on_toggle=self._toggle_pause,

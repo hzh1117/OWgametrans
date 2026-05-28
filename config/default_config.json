@@ -36,7 +36,8 @@
   },
   "hotkeys": {
     "manual_translate": "ctrl+t",
-    "input_helper": "ctrl+shift+t"
+    "input_helper": "ctrl+shift+t",
+    "exit": "ctrl+q"
   },
   "general": {
     "first_run": true,

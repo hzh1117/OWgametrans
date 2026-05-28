@@ -13,16 +13,20 @@ class RegionSelector(QWidget):
         self.setWindowFlags(
             Qt.WindowType.FramelessWindowHint
             | Qt.WindowType.WindowStaysOnTopHint
-            | Qt.WindowType.Tool
         )
         self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
-        self.setWindowState(Qt.WindowState.WindowFullScreen)
         self.setCursor(QCursor(Qt.CursorShape.CrossCursor))
 
         self._start = QPoint()
         self._end = QPoint()
         self._selecting = False
         self._result = None
+
+    def showEvent(self, event):
+        super().showEvent(event)
+        screen = QApplication.primaryScreen()
+        if screen:
+            self.setGeometry(screen.geometry())
 
     def paintEvent(self, event):
         painter = QPainter(self)
@@ -67,8 +71,13 @@ class RegionSelector(QWidget):
 
 
 def select_region() -> tuple[int, int, int, int] | None:
-    app = QApplication.instance() or QApplication(sys.argv)
+    app = QApplication.instance()
+    if app is None:
+        app = QApplication(sys.argv)
+
     selector = RegionSelector()
     selector.showFullScreen()
+    selector.raise_()
+    selector.activateWindow()
     app.exec()
     return selector.get_region()

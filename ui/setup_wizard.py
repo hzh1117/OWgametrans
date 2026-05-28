@@ -59,9 +59,10 @@ class SetupWizard(QWidget):
         self._selected_region = None
 
     def _select_region(self):
-        self.showMinimized()
+        self.hide()
+        QApplication.processEvents()
         region = select_region()
-        self.showNormal()
+        self.show()
         if region:
             self._selected_region = region
             x, y, w, h = region
