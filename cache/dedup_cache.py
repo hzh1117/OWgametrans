@@ -14,9 +14,10 @@ class DedupCache:
 
     def _make_key(self, player: str, message: str) -> str:
         raw = f"{player}{message[:50]}"
-        return hashlib.md5(raw.encode("utf-8"), usedforsecurity=False).hexdigest()
+        return hashlib.blake2b(raw.encode("utf-8"), digest_size=16).hexdigest()
 
-    def is_duplicate(self, player: str, message: str) -> bool:
+    def check_and_add(self, player: str, message: str) -> bool:
+        """Atomically check if duplicate and add if not. Returns True if duplicate."""
         key = self._make_key(player, message)
         now = time.time()
 
@@ -28,21 +29,14 @@ class DedupCache:
             else:
                 del self._cache[key]
 
+        self._cache[key] = now
+        if len(self._cache) > self._max_size:
+            self._cache.popitem(last=False)
+
+        if len(self._cache) > self._max_size * 1.1:
+            self._cleanup(now)
+
         return False
-
-    def add(self, player: str, message: str):
-        key = self._make_key(player, message)
-        now = time.time()
-
-        if key in self._cache:
-            self._cache.move_to_end(key)
-            self._cache[key] = now
-        else:
-            self._cache[key] = now
-            if len(self._cache) > self._max_size:
-                self._cache.popitem(last=False)
-
-        self._cleanup(now)
 
     def _cleanup(self, now: float):
         expired = [k for k, v in self._cache.items() if now - v >= self._ttl]

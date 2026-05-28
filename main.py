@@ -1,6 +1,5 @@
 import sys
 import logging
-import queue
 
 from PyQt6.QtWidgets import QApplication
 from PyQt6.QtCore import QTimer, QThread, pyqtSignal, QObject
@@ -25,30 +24,20 @@ logger = setup_logging()
 class TranslationWorker(QObject):
     finished = pyqtSignal(str, str, str)
     error = pyqtSignal(str)
+    request = pyqtSignal(str, str)
 
     def __init__(self, engine: TranslateEngine):
         super().__init__()
         self._engine = engine
-        self._queue: queue.Queue[tuple[str, str] | None] = queue.Queue()
+        self.request.connect(self._process)
 
-    def enqueue(self, player: str, message: str):
-        self._queue.put((player, message))
-
-    def process(self):
-        while True:
-            item = self._queue.get()
-            if item is None:
-                break
-            player, message = item
-            try:
-                result = self._engine.translate(message)
-                if result:
-                    self.finished.emit(player, message, result)
-            except Exception as e:
-                self.error.emit(str(e))
-
-    def stop(self):
-        self._queue.put(None)
+    def _process(self, player: str, message: str):
+        try:
+            result = self._engine.translate_with_retry(message)
+            if result:
+                self.finished.emit(player, message, result)
+        except Exception as e:
+            self.error.emit(str(e))
 
 
 class GameTransApp:
@@ -58,13 +47,14 @@ class GameTransApp:
         self.app.setQuitOnLastWindowClosed(False)
 
         self.capture = ScreenCapture()
-        self.ocr = WinrtOCR()
+        self.ocr = WinrtOCR(config=self.settings.data)
         self.translate_engine = TranslateEngine()
         self.dedup = DedupCache()
         self.hotkey_mgr = HotkeyManager()
         self.overlay = None
         self.input_helper = None
         self._paused = False
+        self._exiting = False
         self._last_text = ""
         self._timer = None
         self._worker = None
@@ -93,7 +83,6 @@ class GameTransApp:
         self._worker_thread = QThread()
         self._worker = TranslationWorker(self.translate_engine)
         self._worker.moveToThread(self._worker_thread)
-        self._worker_thread.started.connect(self._worker.process)
         self._worker.finished.connect(self._on_translation_done)
         self._worker.error.connect(lambda e: logger.warning("Translation error: %s", e))
         self._worker_thread.start()
@@ -101,7 +90,7 @@ class GameTransApp:
     def _on_translation_done(self, player: str, message: str, translated: str):
         if self.overlay:
             self.overlay.add_message(player, message, translated)
-        logger.info("[%s] %s → %s", player, message[:30], translated[:30])
+        logger.info("[%s] %s -> %s", player, message[:30], translated[:30])
 
     def _start_ocr_loop(self):
         self.ocr.initialize()
@@ -145,11 +134,10 @@ class GameTransApp:
         messages = filter_messages(messages)
 
         for msg in messages:
-            if self.dedup.is_duplicate(msg.player, msg.message):
+            if self.dedup.check_and_add(msg.player, msg.message):
                 continue
-            self.dedup.add(msg.player, msg.message)
             if self._worker:
-                self._worker.enqueue(msg.player, msg.message)
+                self._worker.request.emit(msg.player, msg.message)
 
     def _manual_translate(self):
         logger.info("Manual translate triggered")
@@ -170,15 +158,22 @@ class GameTransApp:
         )
 
     def _exit(self):
+        if self._exiting:
+            return
+        self._exiting = True
+
         if self._timer:
             self._timer.stop()
         if self._worker:
-            self._worker.stop()
+            self._worker.request.disconnect()
         if self._worker_thread:
             self._worker_thread.quit()
             self._worker_thread.wait(2000)
         self.hotkey_mgr.unregister_all()
-        self.capture.close()
+        try:
+            self.capture.close()
+        except Exception:
+            pass
         logger.info("GameTrans exiting")
 
     def run(self):

@@ -6,6 +6,8 @@ from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel, QApplication
 from PyQt6.QtCore import Qt, QTimer
 from PyQt6.QtGui import QFont
 
+from utils.constants import FONT_FAMILY
+
 logger = logging.getLogger("gametrans.overlay")
 
 
@@ -22,8 +24,7 @@ class TranslationOverlay(QWidget):
     def __init__(self, region: tuple[int, int, int, int], config: dict):
         super().__init__()
         self._region = region
-        self._messages: list[TranslatedMessage] = []
-        self._labels: list[QLabel] = []
+        self._entries: list[tuple[TranslatedMessage, QLabel]] = []
         self._max_messages = config.get("max_messages", 10)
         self._display_duration = config.get("display_duration_sec", 5)
         self._fade_duration = config.get("fade_duration_sec", 1.0)
@@ -37,6 +38,9 @@ class TranslationOverlay(QWidget):
         )
         self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
         self.setAttribute(Qt.WidgetAttribute.WA_TransparentForMouseEvents)
+
+        opacity = config.get("opacity", 0.9)
+        self.setWindowOpacity(opacity)
 
         x, y, w, h = region
         overlay_height = 200
@@ -63,20 +67,19 @@ class TranslationOverlay(QWidget):
 
     def add_message(self, player: str, original: str, translated: str):
         msg = TranslatedMessage(player=player, original=original, translated=translated)
-        self._messages.append(msg)
-        if len(self._messages) > self._max_messages:
-            self._messages.pop(0)
-            if self._labels:
-                old = self._labels.pop(0)
-                old.deleteLater()
-        self._add_label(msg)
+        label = self._create_label(msg)
+        self._entries.append((msg, label))
 
-    def _add_label(self, msg: TranslatedMessage):
+        while len(self._entries) > self._max_messages:
+            _, old_label = self._entries.pop(0)
+            old_label.deleteLater()
+
+    def _create_label(self, msg: TranslatedMessage) -> QLabel:
         label = QLabel(f"[{msg.player}] {msg.translated}")
-        label.setFont(QFont("Microsoft YaHei", self._font_size))
+        label.setFont(QFont(FONT_FAMILY, self._font_size))
         label.setStyleSheet(self._style_for(msg.opacity))
         self._layout.addWidget(label)
-        self._labels.append(label)
+        return label
 
     def _style_for(self, opacity: float) -> str:
         return (
@@ -88,20 +91,17 @@ class TranslationOverlay(QWidget):
     def _update_display(self):
         now = time.monotonic()
         to_remove = []
-        for i, msg in enumerate(self._messages):
+        for i, (msg, label) in enumerate(self._entries):
             elapsed = now - msg.created_at
             if elapsed >= self._display_duration + self._fade_duration:
                 to_remove.append(i)
             elif elapsed >= self._display_duration:
                 msg.opacity = 1.0 - (elapsed - self._display_duration) / self._fade_duration
-                if i < len(self._labels):
-                    self._labels[i].setStyleSheet(self._style_for(msg.opacity))
+                label.setStyleSheet(self._style_for(msg.opacity))
 
         for i in reversed(to_remove):
-            self._messages.pop(i)
-            if i < len(self._labels):
-                label = self._labels.pop(i)
-                label.deleteLater()
+            _, label = self._entries.pop(i)
+            label.deleteLater()
 
     def closeEvent(self, event):
         self._timer.stop()

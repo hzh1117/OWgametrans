@@ -3,7 +3,7 @@ import hmac
 import json
 import logging
 from datetime import datetime, timezone
-from urllib.parse import urlencode
+from urllib.parse import urlencode, urlparse
 
 import requests
 
@@ -11,7 +11,7 @@ logger = logging.getLogger("gametrans.translate.volcengine")
 
 SERVICE = "translate"
 REGION = "cn-north-1"
-HOST = "open.volcengineapi.com"
+DEFAULT_HOST = "open.volcengineapi.com"
 PATH = "/"
 QUERY_PARAMS = {"Action": "TranslateText", "Version": "2020-06-01"}
 
@@ -24,9 +24,14 @@ _HEADER_KEY_MAP = {
 
 
 class VolcengineTranslator:
-    def __init__(self, app_id: str, app_key: str):
+    def __init__(self, app_id: str, app_key: str, endpoint: str = ""):
         self.app_id = app_id
         self.app_key = app_key
+        if endpoint:
+            parsed = urlparse(endpoint)
+            self._host = parsed.hostname or DEFAULT_HOST
+        else:
+            self._host = DEFAULT_HOST
 
     def translate(self, text: str, source: str = "auto", target: str = "zh") -> str | None:
         if not self.app_id or not self.app_key:
@@ -47,7 +52,7 @@ class VolcengineTranslator:
 
             headers = {
                 "Content-Type": "application/json",
-                "Host": HOST,
+                "Host": self._host,
                 "X-Date": date_str,
                 "X-Content-Sha256": body_hash,
             }
@@ -81,7 +86,7 @@ class VolcengineTranslator:
             )
             headers["Authorization"] = auth
 
-            url = f"https://{HOST}{PATH}?{sorted_query}"
+            url = f"https://{self._host}{PATH}?{sorted_query}"
             resp = requests.post(url, headers=headers, data=body_bytes, timeout=5)
             resp.raise_for_status()
 

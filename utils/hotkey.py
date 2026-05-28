@@ -14,5 +14,8 @@ class HotkeyManager:
         logger.info("Registered hotkey: %s", hotkey)
 
     def unregister_all(self):
-        keyboard.unhook_all()
-        logger.info("All hotkeys unregistered")
+        try:
+            keyboard.unhook_all()
+            logger.info("All hotkeys unregistered")
+        except Exception as e:
+            logger.warning("Error unregistering hotkeys: %s", e)

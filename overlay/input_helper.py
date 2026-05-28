@@ -4,6 +4,7 @@ from PyQt6.QtCore import Qt, pyqtSignal
 from PyQt6.QtGui import QFont
 
 from translate.engine import TranslateEngine
+from utils.constants import FONT_FAMILY
 
 logger = logging.getLogger("gametrans.overlay")
 
@@ -27,13 +28,13 @@ class InputHelper(QWidget):
         layout = QVBoxLayout()
         layout.setContentsMargins(8, 8, 8, 8)
 
-        self._label = QLabel(f"输入中文 → 翻译为 {self._target_lang}")
-        self._label.setFont(QFont("Microsoft YaHei", 10))
+        self._label = QLabel(f"输入中文 -> 翻译为 {self._target_lang}")
+        self._label.setFont(QFont(FONT_FAMILY, 10))
         self._label.setStyleSheet("color: white; background: rgba(0,0,0,180); padding: 2px;")
         layout.addWidget(self._label)
 
         self._input = QLineEdit()
-        self._input.setFont(QFont("Microsoft YaHei", 12))
+        self._input.setFont(QFont(FONT_FAMILY, 12))
         self._input.setStyleSheet(
             "background: rgba(30,30,30,200); color: white; "
             "border: 1px solid #00c8ff; padding: 4px;"
@@ -49,13 +50,13 @@ class InputHelper(QWidget):
         if not text:
             return
 
-        result = self._engine.translate(text, source="zh")
+        result = self._engine.translate_with_retry(text, source="zh")
         if result:
             clipboard = QApplication.clipboard()
             clipboard.setText(result)
             self._label.setText(f"已复制: {result}")
             self.translated.emit(result)
-            logger.info("Translated: %s → %s", text[:30], result[:30])
+            logger.info("Translated: %s -> %s", text[:30], result[:30])
         else:
             self._label.setText("翻译失败，请重试")
 
@@ -66,7 +67,7 @@ class InputHelper(QWidget):
         self.show()
         self._input.setFocus()
         self._input.clear()
-        self._label.setText(f"输入中文 → 翻译为 {self._target_lang}")
+        self._label.setText(f"输入中文 -> 翻译为 {self._target_lang}")
 
 
 def create_input_helper(translate_engine: TranslateEngine) -> InputHelper:

@@ -9,6 +9,7 @@ from PyQt6.QtGui import QFont
 
 from config.settings import get_settings
 from overlay.region_selector import select_region
+from utils.constants import FONT_FAMILY
 
 logger = logging.getLogger("gametrans.ui")
 
@@ -25,12 +26,12 @@ class SetupWizard(QWidget):
         layout.setContentsMargins(30, 30, 30, 30)
 
         title = QLabel("守望先锋聊天翻译 - 设置向导")
-        title.setFont(QFont("Microsoft YaHei", 16, QFont.Weight.Bold))
+        title.setFont(QFont(FONT_FAMILY, 16, QFont.Weight.Bold))
         title.setAlignment(Qt.AlignmentFlag.AlignCenter)
         layout.addWidget(title)
 
         step1 = QLabel("第1步：选择游戏聊天区域")
-        step1.setFont(QFont("Microsoft YaHei", 12))
+        step1.setFont(QFont(FONT_FAMILY, 12))
         layout.addWidget(step1)
 
         self._region_btn = QPushButton("点击后拖动框选聊天区域")
@@ -39,7 +40,7 @@ class SetupWizard(QWidget):
         layout.addWidget(self._region_btn)
 
         step2 = QLabel("第2步：选择翻译目标语言")
-        step2.setFont(QFont("Microsoft YaHei", 12))
+        step2.setFont(QFont(FONT_FAMILY, 12))
         layout.addWidget(step2)
 
         lang_layout = QHBoxLayout()
@@ -66,7 +67,7 @@ class SetupWizard(QWidget):
         if region:
             self._selected_region = region
             x, y, w, h = region
-            self._region_btn.setText(f"已选择: ({x}, {y}) {w}×{h}")
+            self._region_btn.setText(f"已选择: ({x}, {y}) {w}x{h}")
             logger.info("Region selected: %s", region)
 
     def _finish(self):
@@ -74,15 +75,18 @@ class SetupWizard(QWidget):
         lang_map = {"中文": "zh", "English": "en", "日本語": "ja", "한국어": "ko"}
         target = lang_map.get(self._lang_combo.currentText(), "zh")
 
+        items = [
+            (("translate", "target_language"), target),
+            (("general", "first_run"), False),
+        ]
         if self._selected_region:
-            settings.set("capture", "region", {
+            items.append((("capture", "region"), {
                 "x": self._selected_region[0],
                 "y": self._selected_region[1],
                 "width": self._selected_region[2],
                 "height": self._selected_region[3],
-            })
-        settings.set("translate", "target_language", target)
-        settings.set("general", "first_run", False)
+            }))
+        settings.set_many(items)
         logger.info("Setup complete: target=%s, region=%s", target, self._selected_region)
         self.close()
 

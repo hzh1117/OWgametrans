@@ -42,6 +42,17 @@ class Settings:
                 obj[k] = {}
             obj = obj[k]
         obj[keys[-1]] = value
+
+    def set_and_save(self, *keys_and_value):
+        self.set(*keys_and_value)
+        self.save()
+
+    def set_many(self, items: list[tuple]):
+        """Batch set multiple key-value pairs and save once.
+        items: list of tuples, each being (*keys, value)
+        """
+        for item in items:
+            self.set(*item)
         self.save()
 
     def _deep_merge(self, base, override):

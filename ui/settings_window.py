@@ -7,6 +7,7 @@ from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QFont
 
 from config.settings import get_settings
+from utils.constants import FONT_FAMILY
 
 logger = logging.getLogger("gametrans.ui")
 
@@ -23,7 +24,7 @@ class SettingsWindow(QWidget):
         layout.setContentsMargins(20, 20, 20, 20)
 
         title = QLabel("设置")
-        title.setFont(QFont("Microsoft YaHei", 14, QFont.Weight.Bold))
+        title.setFont(QFont(FONT_FAMILY, 14, QFont.Weight.Bold))
         title.setAlignment(Qt.AlignmentFlag.AlignCenter)
         layout.addWidget(title)
 
@@ -104,23 +105,25 @@ class SettingsWindow(QWidget):
     def _save(self):
         settings = get_settings()
         lang_map = {"中文": "zh", "English": "en", "日本語": "ja", "한국어": "ko"}
-        settings.set("translate", "target_language",
-                      lang_map.get(self._lang_combo.currentText(), "zh"))
+        items = [
+            (("translate", "target_language"),
+             lang_map.get(self._lang_combo.currentText(), "zh")),
+            (("overlay", "font_size"), self._font_size.value()),
+            (("overlay", "opacity"), self._opacity.value()),
+            (("overlay", "display_duration_sec"), self._duration.value()),
+            (("overlay", "max_messages"), self._max_msgs.value()),
+        ]
 
         if self._volc_id.text().strip():
-            settings.set("translate", "volcengine", "app_id", self._volc_id.text().strip())
+            items.append((("translate", "volcengine", "app_id"), self._volc_id.text().strip()))
         if self._volc_key.text().strip():
-            settings.set("translate", "volcengine", "app_key", self._volc_key.text().strip())
+            items.append((("translate", "volcengine", "app_key"), self._volc_key.text().strip()))
         if self._baidu_id.text().strip():
-            settings.set("translate", "baidu", "app_id", self._baidu_id.text().strip())
+            items.append((("translate", "baidu", "app_id"), self._baidu_id.text().strip()))
         if self._baidu_key.text().strip():
-            settings.set("translate", "baidu", "app_key", self._baidu_key.text().strip())
+            items.append((("translate", "baidu", "app_key"), self._baidu_key.text().strip()))
 
-        settings.set("overlay", "font_size", self._font_size.value())
-        settings.set("overlay", "opacity", self._opacity.value())
-        settings.set("overlay", "display_duration_sec", self._duration.value())
-        settings.set("overlay", "max_messages", self._max_msgs.value())
-
+        settings.set_many(items)
         logger.info("Settings saved")
         self.close()
 
@@ -128,5 +131,6 @@ class SettingsWindow(QWidget):
         settings = get_settings()
         settings.set("capture", "region", None)
         settings.set("general", "first_run", True)
+        settings.save()
         logger.info("Region reset, will show setup wizard on next start")
         self.close()

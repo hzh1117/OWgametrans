@@ -1,7 +1,6 @@
-import sys
 import logging
-from PyQt6.QtWidgets import QApplication, QWidget
-from PyQt6.QtCore import Qt, QRect, QPoint
+from PyQt6.QtWidgets import QWidget, QApplication
+from PyQt6.QtCore import Qt, QRect, QPoint, QEventLoop
 from PyQt6.QtGui import QPainter, QColor, QPen, QCursor
 
 logger = logging.getLogger("gametrans.overlay")
@@ -15,6 +14,7 @@ class RegionSelector(QWidget):
             | Qt.WindowType.WindowStaysOnTopHint
         )
         self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
+        self.setAttribute(Qt.WidgetAttribute.WA_DeleteOnClose)
         self.setCursor(QCursor(Qt.CursorShape.CrossCursor))
 
         self._start = QPoint()
@@ -71,13 +71,13 @@ class RegionSelector(QWidget):
 
 
 def select_region() -> tuple[int, int, int, int] | None:
-    app = QApplication.instance()
-    if app is None:
-        app = QApplication(sys.argv)
-
     selector = RegionSelector()
     selector.showFullScreen()
     selector.raise_()
     selector.activateWindow()
-    app.exec()
+
+    loop = QEventLoop()
+    selector.destroyed.connect(loop.quit)
+    loop.exec()
+
     return selector.get_region()

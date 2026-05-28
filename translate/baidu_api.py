@@ -8,23 +8,25 @@ import requests
 
 logger = logging.getLogger("gametrans.translate.baidu")
 
-ENDPOINT = "https://fanyi-api.baidu.com/api/trans/vip/translate"
+DEFAULT_ENDPOINT = "https://fanyi-api.baidu.com/api/trans/vip/translate"
 MIN_INTERVAL = 0.1
 
 
 class BaiduTranslator:
-    def __init__(self, app_id: str, app_key: str):
+    def __init__(self, app_id: str, app_key: str, endpoint: str = ""):
         self.app_id = app_id
         self.app_key = app_key
-        self._last_call = 0.0
+        self._endpoint = endpoint or DEFAULT_ENDPOINT
+        self._next_allowed = 0.0
 
     def translate(self, text: str, source: str = "auto", target: str = "zh") -> str | None:
         if not self.app_id or not self.app_key:
             return None
 
-        elapsed = time.monotonic() - self._last_call
-        if elapsed < MIN_INTERVAL:
-            time.sleep(MIN_INTERVAL - elapsed)
+        now = time.monotonic()
+        if now < self._next_allowed:
+            logger.debug("Baidu rate limited, skipping")
+            return None
 
         try:
             salt = "".join(random.choices(string.digits, k=10))
@@ -40,8 +42,8 @@ class BaiduTranslator:
                 "sign": sign,
             }
 
-            resp = requests.post(ENDPOINT, data=data, timeout=5)
-            self._last_call = time.monotonic()
+            resp = requests.post(self._endpoint, data=data, timeout=5)
+            self._next_allowed = time.monotonic() + MIN_INTERVAL
             resp.raise_for_status()
             result = resp.json()
 

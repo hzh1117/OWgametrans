@@ -1,5 +1,6 @@
 import logging
 import sys
+from logging.handlers import RotatingFileHandler
 from pathlib import Path
 
 
@@ -10,7 +11,12 @@ def setup_logging(level=logging.INFO):
     fmt = "%(asctime)s [%(levelname)s] %(name)s: %(message)s"
     handlers = [
         logging.StreamHandler(sys.stdout),
-        logging.FileHandler(log_dir / "gametrans.log", encoding="utf-8"),
+        RotatingFileHandler(
+            log_dir / "gametrans.log",
+            maxBytes=5 * 1024 * 1024,
+            backupCount=3,
+            encoding="utf-8",
+        ),
     ]
 
     logging.basicConfig(level=level, format=fmt, handlers=handlers)
