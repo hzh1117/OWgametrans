@@ -54,10 +54,14 @@ class TrayIcon(QSystemTrayIcon):
             self._settings_window.show()
 
     def _exit(self):
-        if self._on_exit:
-            self._on_exit()
-        self.hide()
-        QApplication.instance().quit()
+        try:
+            if self._on_exit:
+                self._on_exit()
+        except Exception as e:
+            logger.warning("Exit callback error: %s", e)
+        finally:
+            self.hide()
+            QApplication.instance().quit()
 
     def _on_activated(self, reason):
         if reason == QSystemTrayIcon.ActivationReason.Trigger:

@@ -1,0 +1,1815 @@
+[
+  {
+    "term": "Tracer",
+    "source_lang": "en",
+    "target_zh": "猎空",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "Reinhardt",
+    "source_lang": "en",
+    "target_zh": "莱因哈特",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "rein",
+    "source_lang": "en",
+    "target_zh": "莱因哈特",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "Winston",
+    "source_lang": "en",
+    "target_zh": "温斯顿",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "D.Va",
+    "source_lang": "en",
+    "target_zh": "D.Va",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "dva",
+    "source_lang": "en",
+    "target_zh": "D.Va",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "Wrecking Ball",
+    "source_lang": "en",
+    "target_zh": "破坏球",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "ball",
+    "source_lang": "en",
+    "target_zh": "破坏球",
+    "category": "hero",
+    "confidence": 0.7
+  },
+  {
+    "term": "Orisa",
+    "source_lang": "en",
+    "target_zh": "奥丽莎",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "Sigma",
+    "source_lang": "en",
+    "target_zh": "西格玛",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "Roadhog",
+    "source_lang": "en",
+    "target_zh": "路霸",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "hog",
+    "source_lang": "en",
+    "target_zh": "路霸",
+    "category": "hero",
+    "confidence": 0.7
+  },
+  {
+    "term": "Zarya",
+    "source_lang": "en",
+    "target_zh": "查莉娅",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "Ramattra",
+    "source_lang": "en",
+    "target_zh": "拉玛刹",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "Mauga",
+    "source_lang": "en",
+    "target_zh": "毛加",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "Junker Queen",
+    "source_lang": "en",
+    "target_zh": "渣客女王",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "queen",
+    "source_lang": "en",
+    "target_zh": "渣客女王",
+    "category": "hero",
+    "confidence": 0.6
+  },
+  {
+    "term": "Doomfist",
+    "source_lang": "en",
+    "target_zh": "末日铁拳",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "doom",
+    "source_lang": "en",
+    "target_zh": "末日铁拳",
+    "category": "hero",
+    "confidence": 0.7
+  },
+  {
+    "term": "Soldier: 76",
+    "source_lang": "en",
+    "target_zh": "士兵76",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "soldier",
+    "source_lang": "en",
+    "target_zh": "士兵76",
+    "category": "hero",
+    "confidence": 0.8
+  },
+  {
+    "term": "Cassidy",
+    "source_lang": "en",
+    "target_zh": "卡西迪",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "cass",
+    "source_lang": "en",
+    "target_zh": "卡西迪",
+    "category": "hero",
+    "confidence": 0.7
+  },
+  {
+    "term": "Sojourn",
+    "source_lang": "en",
+    "target_zh": "索杰恩",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "Ashe",
+    "source_lang": "en",
+    "target_zh": "艾什",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "Bastion",
+    "source_lang": "en",
+    "target_zh": "堡垒",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "Hanzo",
+    "source_lang": "en",
+    "target_zh": "半藏",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "Junkrat",
+    "source_lang": "en",
+    "target_zh": "狂鼠",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "Mei",
+    "source_lang": "en",
+    "target_zh": "美",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "Pharah",
+    "source_lang": "en",
+    "target_zh": "法老之鹰",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "Reaper",
+    "source_lang": "en",
+    "target_zh": "死神",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "Symmetra",
+    "source_lang": "en",
+    "target_zh": "秩序之光",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "sym",
+    "source_lang": "en",
+    "target_zh": "秩序之光",
+    "category": "hero",
+    "confidence": 0.7
+  },
+  {
+    "term": "Torbjorn",
+    "source_lang": "en",
+    "target_zh": "托比昂",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "torb",
+    "source_lang": "en",
+    "target_zh": "托比昂",
+    "category": "hero",
+    "confidence": 0.7
+  },
+  {
+    "term": "Widowmaker",
+    "source_lang": "en",
+    "target_zh": "黑百合",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "widow",
+    "source_lang": "en",
+    "target_zh": "黑百合",
+    "category": "hero",
+    "confidence": 0.8
+  },
+  {
+    "term": "Genji",
+    "source_lang": "en",
+    "target_zh": "源氏",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "gen",
+    "source_lang": "en",
+    "target_zh": "源氏",
+    "category": "hero",
+    "confidence": 0.6
+  },
+  {
+    "term": "Sombra",
+    "source_lang": "en",
+    "target_zh": "黑影",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "Echo",
+    "source_lang": "en",
+    "target_zh": "回声",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "Venture",
+    "source_lang": "en",
+    "target_zh": "探奇",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "Freja",
+    "source_lang": "en",
+    "target_zh": "芙蕾雅",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "Mercy",
+    "source_lang": "en",
+    "target_zh": "天使",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "Ana",
+    "source_lang": "en",
+    "target_zh": "安娜",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "Lucio",
+    "source_lang": "en",
+    "target_zh": "卢西奥",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "Moira",
+    "source_lang": "en",
+    "target_zh": "莫伊拉",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "Brigitte",
+    "source_lang": "en",
+    "target_zh": "布丽吉塔",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "brig",
+    "source_lang": "en",
+    "target_zh": "布丽吉塔",
+    "category": "hero",
+    "confidence": 0.8
+  },
+  {
+    "term": "Baptiste",
+    "source_lang": "en",
+    "target_zh": "巴蒂斯特",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "bap",
+    "source_lang": "en",
+    "target_zh": "巴蒂斯特",
+    "category": "hero",
+    "confidence": 0.7
+  },
+  {
+    "term": "Zenyatta",
+    "source_lang": "en",
+    "target_zh": "禅雅塔",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "zen",
+    "source_lang": "en",
+    "target_zh": "禅雅塔",
+    "category": "hero",
+    "confidence": 0.7
+  },
+  {
+    "term": "Kiriko",
+    "source_lang": "en",
+    "target_zh": "雾子",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "Lifeweaver",
+    "source_lang": "en",
+    "target_zh": "生命之梭",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "Illari",
+    "source_lang": "en",
+    "target_zh": "伊拉锐",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "Juno",
+    "source_lang": "en",
+    "target_zh": "朱诺",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "Graviton Surge",
+    "source_lang": "en",
+    "target_zh": "引力乱流",
+    "category": "ability",
+    "confidence": 1.0
+  },
+  {
+    "term": "grav",
+    "source_lang": "en",
+    "target_zh": "引力乱流",
+    "category": "ability",
+    "confidence": 0.9
+  },
+  {
+    "term": "Dragonblade",
+    "source_lang": "en",
+    "target_zh": "龙刃",
+    "category": "ability",
+    "confidence": 1.0
+  },
+  {
+    "term": "blade",
+    "source_lang": "en",
+    "target_zh": "龙刃",
+    "category": "ability",
+    "confidence": 0.6
+  },
+  {
+    "term": "Nanoboost",
+    "source_lang": "en",
+    "target_zh": "纳米激素",
+    "category": "ability",
+    "confidence": 1.0
+  },
+  {
+    "term": "nano",
+    "source_lang": "en",
+    "target_zh": "纳米激素",
+    "category": "ability",
+    "confidence": 0.9
+  },
+  {
+    "term": "Tactical Visor",
+    "source_lang": "en",
+    "target_zh": "战术目镜",
+    "category": "ability",
+    "confidence": 1.0
+  },
+  {
+    "term": "visors",
+    "source_lang": "en",
+    "target_zh": "战术目镜",
+    "category": "ability",
+    "confidence": 0.7
+  },
+  {
+    "term": "Rally",
+    "source_lang": "en",
+    "target_zh": "集结号令",
+    "category": "ability",
+    "confidence": 1.0
+  },
+  {
+    "term": "Primal Rage",
+    "source_lang": "en",
+    "target_zh": "原始暴怒",
+    "category": "ability",
+    "confidence": 1.0
+  },
+  {
+    "term": "primal",
+    "source_lang": "en",
+    "target_zh": "原始暴怒",
+    "category": "ability",
+    "confidence": 0.8
+  },
+  {
+    "term": "Self-Destruct",
+    "source_lang": "en",
+    "target_zh": "自毁",
+    "category": "ability",
+    "confidence": 1.0
+  },
+  {
+    "term": "Barrage",
+    "source_lang": "en",
+    "target_zh": "火箭弹幕",
+    "category": "ability",
+    "confidence": 1.0
+  },
+  {
+    "term": "RIP-Tire",
+    "source_lang": "en",
+    "target_zh": "轮胎炸弹",
+    "category": "ability",
+    "confidence": 1.0
+  },
+  {
+    "term": "Deadeye",
+    "source_lang": "en",
+    "target_zh": "神射手",
+    "category": "ability",
+    "confidence": 1.0
+  },
+  {
+    "term": "High Noon",
+    "source_lang": "en",
+    "target_zh": "午时已到",
+    "category": "ability",
+    "confidence": 1.0
+  },
+  {
+    "term": "Earthshatter",
+    "source_lang": "en",
+    "target_zh": "裂地猛击",
+    "category": "ability",
+    "confidence": 1.0
+  },
+  {
+    "term": "shatter",
+    "source_lang": "en",
+    "target_zh": "裂地猛击",
+    "category": "ability",
+    "confidence": 0.8
+  },
+  {
+    "term": "Sound Barrier",
+    "source_lang": "en",
+    "target_zh": "音障",
+    "category": "ability",
+    "confidence": 1.0
+  },
+  {
+    "term": "beat",
+    "source_lang": "en",
+    "target_zh": "音障",
+    "category": "ability",
+    "confidence": 0.7
+  },
+  {
+    "term": "Transcendence",
+    "source_lang": "en",
+    "target_zh": "圣",
+    "category": "ability",
+    "confidence": 1.0
+  },
+  {
+    "term": "trans",
+    "source_lang": "en",
+    "target_zh": "圣",
+    "category": "ability",
+    "confidence": 0.7
+  },
+  {
+    "term": "EMP",
+    "source_lang": "en",
+    "target_zh": "电磁脉冲",
+    "category": "ability",
+    "confidence": 1.0
+  },
+  {
+    "term": "Coalescence",
+    "source_lang": "en",
+    "target_zh": "聚合射线",
+    "category": "ability",
+    "confidence": 1.0
+  },
+  {
+    "term": "Window",
+    "source_lang": "en",
+    "target_zh": "增幅矩阵",
+    "category": "ability",
+    "confidence": 0.7
+  },
+  {
+    "term": "Tree",
+    "source_lang": "en",
+    "target_zh": "生命之树",
+    "category": "ability",
+    "confidence": 0.7
+  },
+  {
+    "term": "Kitsune Rush",
+    "source_lang": "en",
+    "target_zh": "狐神冲刺",
+    "category": "ability",
+    "confidence": 1.0
+  },
+  {
+    "term": "flux",
+    "source_lang": "en",
+    "target_zh": "引力流",
+    "category": "ability",
+    "confidence": 0.8
+  },
+  {
+    "term": "King's Row",
+    "source_lang": "en",
+    "target_zh": "国王大道",
+    "category": "map",
+    "confidence": 1.0
+  },
+  {
+    "term": "Dorado",
+    "source_lang": "en",
+    "target_zh": "多拉多",
+    "category": "map",
+    "confidence": 1.0
+  },
+  {
+    "term": "Havana",
+    "source_lang": "en",
+    "target_zh": "哈瓦那",
+    "category": "map",
+    "confidence": 1.0
+  },
+  {
+    "term": "Numbani",
+    "source_lang": "en",
+    "target_zh": "努巴尼",
+    "category": "map",
+    "confidence": 1.0
+  },
+  {
+    "term": "Eichenwalde",
+    "source_lang": "en",
+    "target_zh": "艾兴瓦尔德",
+    "category": "map",
+    "confidence": 1.0
+  },
+  {
+    "term": "Hollywood",
+    "source_lang": "en",
+    "target_zh": "好莱坞",
+    "category": "map",
+    "confidence": 1.0
+  },
+  {
+    "term": "Watchpoint: Gibraltar",
+    "source_lang": "en",
+    "target_zh": "监测站:直布罗陀",
+    "category": "map",
+    "confidence": 1.0
+  },
+  {
+    "term": "Gibraltar",
+    "source_lang": "en",
+    "target_zh": "直布罗陀",
+    "category": "map",
+    "confidence": 0.8
+  },
+  {
+    "term": "Rialto",
+    "source_lang": "en",
+    "target_zh": "里阿尔托",
+    "category": "map",
+    "confidence": 1.0
+  },
+  {
+    "term": "Circuit Royal",
+    "source_lang": "en",
+    "target_zh": "皇家赛道",
+    "category": "map",
+    "confidence": 1.0
+  },
+  {
+    "term": "Ilios",
+    "source_lang": "en",
+    "target_zh": "伊利奥斯",
+    "category": "map",
+    "confidence": 1.0
+  },
+  {
+    "term": "Lijiang Tower",
+    "source_lang": "en",
+    "target_zh": "漓江塔",
+    "category": "map",
+    "confidence": 1.0
+  },
+  {
+    "term": "Nepal",
+    "source_lang": "en",
+    "target_zh": "尼泊尔",
+    "category": "map",
+    "confidence": 1.0
+  },
+  {
+    "term": "Oasis",
+    "source_lang": "en",
+    "target_zh": "绿洲城",
+    "category": "map",
+    "confidence": 1.0
+  },
+  {
+    "term": "Busan",
+    "source_lang": "en",
+    "target_zh": "釜山",
+    "category": "map",
+    "confidence": 1.0
+  },
+  {
+    "term": "Paraiso",
+    "source_lang": "en",
+    "target_zh": "天堂",
+    "category": "map",
+    "confidence": 1.0
+  },
+  {
+    "term": "Colosseo",
+    "source_lang": "en",
+    "target_zh": "斗兽场",
+    "category": "map",
+    "confidence": 1.0
+  },
+  {
+    "term": "Midtown",
+    "source_lang": "en",
+    "target_zh": "中城",
+    "category": "map",
+    "confidence": 1.0
+  },
+  {
+    "term": "New Queen Street",
+    "source_lang": "en",
+    "target_zh": "新皇后街",
+    "category": "map",
+    "confidence": 1.0
+  },
+  {
+    "term": "Shambali",
+    "source_lang": "en",
+    "target_zh": "香巴里",
+    "category": "map",
+    "confidence": 1.0
+  },
+  {
+    "term": "Suravasa",
+    "source_lang": "en",
+    "target_zh": "苏拉瓦萨",
+    "category": "map",
+    "confidence": 1.0
+  },
+  {
+    "term": "payload",
+    "source_lang": "en",
+    "target_zh": "运载目标",
+    "category": "mode",
+    "confidence": 1.0
+  },
+  {
+    "term": "cart",
+    "source_lang": "en",
+    "target_zh": "车",
+    "category": "mode",
+    "confidence": 0.8
+  },
+  {
+    "term": "point",
+    "source_lang": "en",
+    "target_zh": "点",
+    "category": "mode",
+    "confidence": 0.7
+  },
+  {
+    "term": "control point",
+    "source_lang": "en",
+    "target_zh": "控制点",
+    "category": "mode",
+    "confidence": 1.0
+  },
+  {
+    "term": "KOTH",
+    "source_lang": "en",
+    "target_zh": "占点",
+    "category": "mode",
+    "confidence": 1.0
+  },
+  {
+    "term": "push",
+    "source_lang": "en",
+    "target_zh": "推进",
+    "category": "mode",
+    "confidence": 0.8
+  },
+  {
+    "term": "flashpoint",
+    "source_lang": "en",
+    "target_zh": "闪点",
+    "category": "mode",
+    "confidence": 1.0
+  },
+  {
+    "term": "clash",
+    "source_lang": "en",
+    "target_zh": "冲突",
+    "category": "mode",
+    "confidence": 1.0
+  },
+  {
+    "term": "overtime",
+    "source_lang": "en",
+    "target_zh": "加时",
+    "category": "mode",
+    "confidence": 1.0
+  },
+  {
+    "term": "OT",
+    "source_lang": "en",
+    "target_zh": "加时",
+    "category": "mode",
+    "confidence": 0.8
+  },
+  {
+    "term": "stall",
+    "source_lang": "en",
+    "target_zh": "拖时间",
+    "category": "mode",
+    "confidence": 1.0
+  },
+  {
+    "term": "cap",
+    "source_lang": "en",
+    "target_zh": "占点",
+    "category": "mode",
+    "confidence": 0.8
+  },
+  {
+    "term": "c9",
+    "source_lang": "en",
+    "target_zh": "C9（忘了占点）",
+    "category": "mode",
+    "confidence": 1.0
+  },
+  {
+    "term": "backcap",
+    "source_lang": "en",
+    "target_zh": "偷点",
+    "category": "mode",
+    "confidence": 1.0
+  },
+  {
+    "term": "tank",
+    "source_lang": "en",
+    "target_zh": "坦克",
+    "category": "role",
+    "confidence": 1.0
+  },
+  {
+    "term": "dps",
+    "source_lang": "en",
+    "target_zh": "输出",
+    "category": "role",
+    "confidence": 1.0
+  },
+  {
+    "term": "support",
+    "source_lang": "en",
+    "target_zh": "辅助",
+    "category": "role",
+    "confidence": 1.0
+  },
+  {
+    "term": "healer",
+    "source_lang": "en",
+    "target_zh": "奶妈",
+    "category": "role",
+    "confidence": 1.0
+  },
+  {
+    "term": "main tank",
+    "source_lang": "en",
+    "target_zh": "主坦",
+    "category": "role",
+    "confidence": 1.0
+  },
+  {
+    "term": "off tank",
+    "source_lang": "en",
+    "target_zh": "副坦",
+    "category": "role",
+    "confidence": 1.0
+  },
+  {
+    "term": "main support",
+    "source_lang": "en",
+    "target_zh": "主辅",
+    "category": "role",
+    "confidence": 1.0
+  },
+  {
+    "term": "flex",
+    "source_lang": "en",
+    "target_zh": "自由人",
+    "category": "role",
+    "confidence": 0.8
+  },
+  {
+    "term": "diff",
+    "source_lang": "en",
+    "target_zh": "差距",
+    "category": "slang",
+    "confidence": 1.0
+  },
+  {
+    "term": "gg",
+    "source_lang": "en",
+    "target_zh": "gg",
+    "category": "slang",
+    "confidence": 1.0
+  },
+  {
+    "term": "throw",
+    "source_lang": "en",
+    "target_zh": "送",
+    "category": "slang",
+    "confidence": 0.9
+  },
+  {
+    "term": "throwing",
+    "source_lang": "en",
+    "target_zh": "在送",
+    "category": "slang",
+    "confidence": 1.0
+  },
+  {
+    "term": "carry",
+    "source_lang": "en",
+    "target_zh": "带飞",
+    "category": "slang",
+    "confidence": 1.0
+  },
+  {
+    "term": "clutch",
+    "source_lang": "en",
+    "target_zh": "翻盘",
+    "category": "slang",
+    "confidence": 0.9
+  },
+  {
+    "term": "feed",
+    "source_lang": "en",
+    "target_zh": "送人头",
+    "category": "slang",
+    "confidence": 1.0
+  },
+  {
+    "term": "feeding",
+    "source_lang": "en",
+    "target_zh": "在送人头",
+    "category": "slang",
+    "confidence": 1.0
+  },
+  {
+    "term": "tilt",
+    "source_lang": "en",
+    "target_zh": "上头",
+    "category": "slang",
+    "confidence": 1.0
+  },
+  {
+    "term": "tilted",
+    "source_lang": "en",
+    "target_zh": "上头了",
+    "category": "slang",
+    "confidence": 1.0
+  },
+  {
+    "term": "peel",
+    "source_lang": "en",
+    "target_zh": "帮拆",
+    "category": "slang",
+    "confidence": 1.0
+  },
+  {
+    "term": "gap",
+    "source_lang": "en",
+    "target_zh": "差距",
+    "category": "slang",
+    "confidence": 0.8
+  },
+  {
+    "term": "ez",
+    "source_lang": "en",
+    "target_zh": "轻松",
+    "category": "slang",
+    "confidence": 1.0
+  },
+  {
+    "term": "diffed",
+    "source_lang": "en",
+    "target_zh": "被碾压了",
+    "category": "slang",
+    "confidence": 1.0
+  },
+  {
+    "term": "swap",
+    "source_lang": "en",
+    "target_zh": "换",
+    "category": "slang",
+    "confidence": 0.8
+  },
+  {
+    "term": "switch",
+    "source_lang": "en",
+    "target_zh": "换",
+    "category": "slang",
+    "confidence": 0.8
+  },
+  {
+    "term": "cracked",
+    "source_lang": "en",
+    "target_zh": "太猛了",
+    "category": "slang",
+    "confidence": 1.0
+  },
+  {
+    "term": "one",
+    "source_lang": "en",
+    "target_zh": "就一个了",
+    "category": "slang",
+    "confidence": 0.6
+  },
+  {
+    "term": "low",
+    "source_lang": "en",
+    "target_zh": "残血",
+    "category": "slang",
+    "confidence": 0.7
+  },
+  {
+    "term": "anti",
+    "source_lang": "en",
+    "target_zh": "禁疗",
+    "category": "slang",
+    "confidence": 0.9
+  },
+  {
+    "term": "purple",
+    "source_lang": "en",
+    "target_zh": "禁疗",
+    "category": "slang",
+    "confidence": 0.8
+  },
+  {
+    "term": "sleep",
+    "source_lang": "en",
+    "target_zh": "睡了",
+    "category": "slang",
+    "confidence": 0.8
+  },
+  {
+    "term": "slept",
+    "source_lang": "en",
+    "target_zh": "被睡了",
+    "category": "slang",
+    "confidence": 0.9
+  },
+  {
+    "term": "boop",
+    "source_lang": "en",
+    "target_zh": "推了一下",
+    "category": "slang",
+    "confidence": 0.8
+  },
+  {
+    "term": "pick",
+    "source_lang": "en",
+    "target_zh": "击杀",
+    "category": "slang",
+    "confidence": 0.7
+  },
+  {
+    "term": "picks",
+    "source_lang": "en",
+    "target_zh": "击杀数",
+    "category": "slang",
+    "confidence": 0.7
+  },
+  {
+    "term": "pocket",
+    "source_lang": "en",
+    "target_zh": "跟",
+    "category": "slang",
+    "confidence": 0.8
+  },
+  {
+    "term": "pocketed",
+    "source_lang": "en",
+    "target_zh": "被跟了",
+    "category": "slang",
+    "confidence": 0.9
+  },
+  {
+    "term": "smurf",
+    "source_lang": "en",
+    "target_zh": "炸鱼",
+    "category": "slang",
+    "confidence": 1.0
+  },
+  {
+    "term": "win trading",
+    "source_lang": "en",
+    "target_zh": "演员",
+    "category": "slang",
+    "confidence": 1.0
+  },
+  {
+    "term": "boosted",
+    "source_lang": "en",
+    "target_zh": "被带上来的",
+    "category": "slang",
+    "confidence": 1.0
+  },
+  {
+    "term": "hardstuck",
+    "source_lang": "en",
+    "target_zh": "卡段位",
+    "category": "slang",
+    "confidence": 1.0
+  },
+  {
+    "term": "derank",
+    "source_lang": "en",
+    "target_zh": "掉分",
+    "category": "slang",
+    "confidence": 1.0
+  },
+  {
+    "term": "sr",
+    "source_lang": "en",
+    "target_zh": "分数",
+    "category": "slang",
+    "confidence": 0.7
+  },
+  {
+    "term": "heal me",
+    "source_lang": "en",
+    "target_zh": "奶我",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "need heals",
+    "source_lang": "en",
+    "target_zh": "需要治疗",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "group up",
+    "source_lang": "en",
+    "target_zh": "集合",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "regroup",
+    "source_lang": "en",
+    "target_zh": "重新集合",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "push now",
+    "source_lang": "en",
+    "target_zh": "现在冲",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "go in",
+    "source_lang": "en",
+    "target_zh": "冲",
+    "category": "phrase",
+    "confidence": 0.8
+  },
+  {
+    "term": "fall back",
+    "source_lang": "en",
+    "target_zh": "后撤",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "nice shot",
+    "source_lang": "en",
+    "target_zh": "好枪",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "nice",
+    "source_lang": "en",
+    "target_zh": "漂亮",
+    "category": "phrase",
+    "confidence": 0.8
+  },
+  {
+    "term": "go next",
+    "source_lang": "en",
+    "target_zh": "下一把",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "uninstall",
+    "source_lang": "en",
+    "target_zh": "卸载吧",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "switch to rein",
+    "source_lang": "en",
+    "target_zh": "换莱因哈特",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "tank diff",
+    "source_lang": "en",
+    "target_zh": "坦克差距",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "dps diff",
+    "source_lang": "en",
+    "target_zh": "输出差距",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "support diff",
+    "source_lang": "en",
+    "target_zh": "辅助差距",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "heal diff",
+    "source_lang": "en",
+    "target_zh": "奶量差距",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "nano me",
+    "source_lang": "en",
+    "target_zh": "给我激素",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "grav combo",
+    "source_lang": "en",
+    "target_zh": "引力配合",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "lamp down",
+    "source_lang": "en",
+    "target_zh": "灯倒了",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "high ground",
+    "source_lang": "en",
+    "target_zh": "高台",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "low ground",
+    "source_lang": "en",
+    "target_zh": "低地",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "point A",
+    "source_lang": "en",
+    "target_zh": "A点",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "point B",
+    "source_lang": "en",
+    "target_zh": "B点",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "peel for me",
+    "source_lang": "en",
+    "target_zh": "帮我拆一下",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "focus",
+    "source_lang": "en",
+    "target_zh": "集火",
+    "category": "phrase",
+    "confidence": 0.8
+  },
+  {
+    "term": "focus him",
+    "source_lang": "en",
+    "target_zh": "集火他",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "on me",
+    "source_lang": "en",
+    "target_zh": "在我这",
+    "category": "phrase",
+    "confidence": 0.8
+  },
+  {
+    "term": "behind",
+    "source_lang": "en",
+    "target_zh": "后面",
+    "category": "phrase",
+    "confidence": 0.7
+  },
+  {
+    "term": "flanking",
+    "source_lang": "en",
+    "target_zh": "绕后",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "they have ult",
+    "source_lang": "en",
+    "target_zh": "他们有大",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "no ult",
+    "source_lang": "en",
+    "target_zh": "没有大",
+    "category": "phrase",
+    "confidence": 0.8
+  },
+  {
+    "term": "combo ult",
+    "source_lang": "en",
+    "target_zh": "大招配合",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "play safe",
+    "source_lang": "en",
+    "target_zh": "稳一点",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "dont peek",
+    "source_lang": "en",
+    "target_zh": "别露头",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "widow sightline",
+    "source_lang": "en",
+    "target_zh": "黑百合视线",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "focus the mercy",
+    "source_lang": "en",
+    "target_zh": "集火天使",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "widow is carrying",
+    "source_lang": "en",
+    "target_zh": "黑百合在带飞",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "tracer diff",
+    "source_lang": "en",
+    "target_zh": "猎空差距",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "genji is flanking",
+    "source_lang": "en",
+    "target_zh": "源氏在绕后",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "mercy low",
+    "source_lang": "en",
+    "target_zh": "天使残血",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "ana anti",
+    "source_lang": "en",
+    "target_zh": "安娜禁疗",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "zarya has grav",
+    "source_lang": "en",
+    "target_zh": "查莉娅有引力",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "lucio beat",
+    "source_lang": "en",
+    "target_zh": "卢西奥音障",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "트레이서",
+    "source_lang": "ko",
+    "target_zh": "猎空",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "라인하르트",
+    "source_lang": "ko",
+    "target_zh": "莱因哈特",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "윈스턴",
+    "source_lang": "ko",
+    "target_zh": "温斯顿",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "디바",
+    "source_lang": "ko",
+    "target_zh": "D.Va",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "시그마",
+    "source_lang": "ko",
+    "target_zh": "西格玛",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "자리아",
+    "source_lang": "ko",
+    "target_zh": "查莉娅",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "리퍼",
+    "source_lang": "ko",
+    "target_zh": "死神",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "겐지",
+    "source_lang": "ko",
+    "target_zh": "源氏",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "한조",
+    "source_lang": "ko",
+    "target_zh": "半藏",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "솔저",
+    "source_lang": "ko",
+    "target_zh": "士兵76",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "캐서디",
+    "source_lang": "ko",
+    "target_zh": "卡西迪",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "위도우메이커",
+    "source_lang": "ko",
+    "target_zh": "黑百合",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "위도우",
+    "source_lang": "ko",
+    "target_zh": "黑百合",
+    "category": "hero",
+    "confidence": 0.9
+  },
+  {
+    "term": "메르시",
+    "source_lang": "ko",
+    "target_zh": "天使",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "아나",
+    "source_lang": "ko",
+    "target_zh": "安娜",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "루시우",
+    "source_lang": "ko",
+    "target_zh": "卢西奥",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "모이라",
+    "source_lang": "ko",
+    "target_zh": "莫伊拉",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "키리코",
+    "source_lang": "ko",
+    "target_zh": "雾子",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "둠피스트",
+    "source_lang": "ko",
+    "target_zh": "末日铁拳",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "파라",
+    "source_lang": "ko",
+    "target_zh": "法老之鹰",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "정크랫",
+    "source_lang": "ko",
+    "target_zh": "狂鼠",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "토르비른",
+    "source_lang": "ko",
+    "target_zh": "托比昂",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "トレーサー",
+    "source_lang": "ja",
+    "target_zh": "猎空",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "ラインハルト",
+    "source_lang": "ja",
+    "target_zh": "莱因哈特",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "ウィンストン",
+    "source_lang": "ja",
+    "target_zh": "温斯顿",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "D.Va",
+    "source_lang": "ja",
+    "target_zh": "D.Va",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "シグマ",
+    "source_lang": "ja",
+    "target_zh": "西格玛",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "リーパー",
+    "source_lang": "ja",
+    "target_zh": "死神",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "ゲンジ",
+    "source_lang": "ja",
+    "target_zh": "源氏",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "ハンゾー",
+    "source_lang": "ja",
+    "target_zh": "半藏",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "ソルジャー76",
+    "source_lang": "ja",
+    "target_zh": "士兵76",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "キャスディ",
+    "source_lang": "ja",
+    "target_zh": "卡西迪",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "ウィドウメイカー",
+    "source_lang": "ja",
+    "target_zh": "黑百合",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "ウィドウ",
+    "source_lang": "ja",
+    "target_zh": "黑百合",
+    "category": "hero",
+    "confidence": 0.9
+  },
+  {
+    "term": "マーシー",
+    "source_lang": "ja",
+    "target_zh": "天使",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "アナ",
+    "source_lang": "ja",
+    "target_zh": "安娜",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "ルシオ",
+    "source_lang": "ja",
+    "target_zh": "卢西奥",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "モイラ",
+    "source_lang": "ja",
+    "target_zh": "莫伊拉",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "キリコ",
+    "source_lang": "ja",
+    "target_zh": "雾子",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "Doomfist",
+    "source_lang": "ja",
+    "target_zh": "末日铁拳",
+    "category": "hero",
+    "confidence": 1.0
+  },
+  {
+    "term": "힐줘",
+    "source_lang": "ko",
+    "target_zh": "奶我",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "모여",
+    "source_lang": "ko",
+    "target_zh": "集合",
+    "category": "phrase",
+    "confidence": 1.0
+  },
+  {
+    "term": "밀어",
+    "source_lang": "ko",
+    "target_zh": "推",
+    "category": "phrase",
+    "confidence": 0.8
+  },
+  {
+    "term": "뒤로",
+    "source_lang": "ko",
+    "target_zh": "后撤",
+    "category": "phrase",
+    "confidence": 0.8
+  },
+  {
+    "term": "교체",
+    "source_lang": "ko",
+    "target_zh": "换",
+    "category": "phrase",
+    "confidence": 0.8
+  },
+  {
+    "term": "차이",
+    "source_lang": "ko",
+    "target_zh": "差距",
+    "category": "slang",
+    "confidence": 0.8
+  },
+  {
+    "term": "ヒーラー",
+    "source_lang": "ja",
+    "target_zh": "奶妈",
+    "category": "role",
+    "confidence": 1.0
+  },
+  {
+    "term": "タンク",
+    "source_lang": "ja",
+    "target_zh": "坦克",
+    "category": "role",
+    "confidence": 1.0
+  },
+  {
+    "term": "DPS",
+    "source_lang": "ja",
+    "target_zh": "输出",
+    "category": "role",
+    "confidence": 1.0
+  },
+  {
+    "term": "集合",
+    "source_lang": "ja",
+    "target_zh": "集合",
+    "category": "phrase",
+    "confidence": 0.8
+  },
+  {
+    "term": "Play of the Game",
+    "source_lang": "en",
+    "target_zh": "最佳表现",
+    "category": "ui",
+    "confidence": 1.0
+  },
+  {
+    "term": "POTG",
+    "source_lang": "en",
+    "target_zh": "最佳表现",
+    "category": "ui",
+    "confidence": 1.0
+  },
+  {
+    "term": "Victory",
+    "source_lang": "en",
+    "target_zh": "胜利",
+    "category": "ui",
+    "confidence": 1.0
+  },
+  {
+    "term": "Defeat",
+    "source_lang": "en",
+    "target_zh": "失败",
+    "category": "ui",
+    "confidence": 1.0
+  }
+]

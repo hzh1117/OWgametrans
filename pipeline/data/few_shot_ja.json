@@ -1,0 +1,318 @@
+[
+  {
+    "id": "ja_001",
+    "source_lang": "ja",
+    "source": "ヒーラー助けて",
+    "target_zh": "奶妈救命",
+    "terms": [
+      "ヒーラー"
+    ],
+    "tags": [
+      "phrase"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ja_002",
+    "source_lang": "ja",
+    "source": "集合して",
+    "target_zh": "集合",
+    "terms": [
+      "集合"
+    ],
+    "tags": [
+      "strategy"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ja_003",
+    "source_lang": "ja",
+    "source": "トレーサー交代して",
+    "target_zh": "换猎空",
+    "terms": [
+      "トレーサー"
+    ],
+    "tags": [
+      "hero",
+      "strategy"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ja_004",
+    "source_lang": "ja",
+    "source": "ゲンジ後ろ",
+    "target_zh": "源氏在后面",
+    "terms": [
+      "ゲンジ"
+    ],
+    "tags": [
+      "callout"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ja_005",
+    "source_lang": "ja",
+    "source": "マーシー落とせ",
+    "target_zh": "杀天使",
+    "terms": [
+      "マーシー"
+    ],
+    "tags": [
+      "callout"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ja_006",
+    "source_lang": "ja",
+    "source": "アナの禁療ついた",
+    "target_zh": "被安娜禁疗了",
+    "terms": [
+      "アナ"
+    ],
+    "tags": [
+      "callout"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ja_007",
+    "source_lang": "ja",
+    "source": "D.Vaの自爆",
+    "target_zh": "D.Va炸弹",
+    "terms": [
+      "D.Va"
+    ],
+    "tags": [
+      "ability"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ja_008",
+    "source_lang": "ja",
+    "source": "ルシオのバリア",
+    "target_zh": "卢西奥音障",
+    "terms": [
+      "ルシオ"
+    ],
+    "tags": [
+      "ability"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ja_009",
+    "source_lang": "ja",
+    "source": "ラインハルトの盾ない",
+    "target_zh": "莱因哈特没盾了",
+    "terms": [
+      "ラインハルト"
+    ],
+    "tags": [
+      "callout"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ja_010",
+    "source_lang": "ja",
+    "source": "後ろに下がって",
+    "target_zh": "后撤",
+    "terms": [],
+    "tags": [
+      "strategy"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ja_011",
+    "source_lang": "ja",
+    "source": "ウィンストン飛んだ",
+    "target_zh": "温斯顿跳了",
+    "terms": [
+      "ウィンストン"
+    ],
+    "tags": [
+      "callout"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ja_012",
+    "source_lang": "ja",
+    "source": "シグマのグラビトン",
+    "target_zh": "西格玛引力",
+    "terms": [
+      "シグマ"
+    ],
+    "tags": [
+      "ability"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ja_013",
+    "source_lang": "ja",
+    "source": "ウィドウ気をつけて",
+    "target_zh": "小心黑百合",
+    "terms": [
+      "ウィドウ"
+    ],
+    "tags": [
+      "callout"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ja_014",
+    "source_lang": "ja",
+    "source": "リーパー後ろに",
+    "target_zh": "死神在后面",
+    "terms": [
+      "リーパー"
+    ],
+    "tags": [
+      "callout"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ja_015",
+    "source_lang": "ja",
+    "source": "キャスディのデッドアイ",
+    "target_zh": "卡西迪午时已到",
+    "terms": [
+      "キャスディ"
+    ],
+    "tags": [
+      "ability"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ja_016",
+    "source_lang": "ja",
+    "source": "ソルジャーのタクティカルバイザー",
+    "target_zh": "士兵76目镜",
+    "terms": [
+      "ソルジャー76"
+    ],
+    "tags": [
+      "ability"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ja_017",
+    "source_lang": "ja",
+    "source": "モイラのCoalescence",
+    "target_zh": "莫伊拉聚合射线",
+    "terms": [
+      "モイラ"
+    ],
+    "tags": [
+      "ability"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ja_018",
+    "source_lang": "ja",
+    "source": "キリコの狐",
+    "target_zh": "雾子狐神",
+    "terms": [
+      "キリコ"
+    ],
+    "tags": [
+      "ability"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ja_019",
+    "source_lang": "ja",
+    "source": "ハンゾーの龍",
+    "target_zh": "半藏龙",
+    "terms": [
+      "ハンゾー"
+    ],
+    "tags": [
+      "ability"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ja_020",
+    "source_lang": "ja",
+    "source": "タンクの差",
+    "target_zh": "坦克差距",
+    "terms": [
+      "タンク"
+    ],
+    "tags": [
+      "slang"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ja_021",
+    "source_lang": "ja",
+    "source": "アナのスリープ",
+    "target_zh": "安娜睡了",
+    "terms": [
+      "アナ"
+    ],
+    "tags": [
+      "ability"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ja_022",
+    "source_lang": "ja",
+    "source": "フォーカスして",
+    "target_zh": "集火",
+    "terms": [],
+    "tags": [
+      "strategy"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ja_023",
+    "source_lang": "ja",
+    "source": "フレイカー出てる",
+    "target_zh": "有人绕后",
+    "terms": [],
+    "tags": [
+      "callout"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ja_024",
+    "source_lang": "ja",
+    "source": "アルティメットない",
+    "target_zh": "没有大",
+    "terms": [],
+    "tags": [
+      "callout"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ja_025",
+    "source_lang": "ja",
+    "source": "後ろ気をつけて",
+    "target_zh": "小心后面",
+    "terms": [],
+    "tags": [
+      "callout"
+    ],
+    "quality": "curated"
+  }
+]

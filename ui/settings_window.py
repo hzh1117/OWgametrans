@@ -1,7 +1,8 @@
 import logging
 from PyQt6.QtWidgets import (
     QWidget, QVBoxLayout, QFormLayout, QLabel, QLineEdit,
-    QComboBox, QSpinBox, QDoubleSpinBox, QPushButton, QGroupBox
+    QComboBox, QSpinBox, QDoubleSpinBox, QPushButton, QGroupBox,
+    QCheckBox, QPlainTextEdit
 )
 from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QFont
@@ -50,6 +51,7 @@ class SettingsWindow(QWidget):
 
         self._volc_key = QLineEdit(volc_cfg.get("app_key", ""))
         self._volc_key.setPlaceholderText("留空则使用内置密钥")
+        self._volc_key.setEchoMode(QLineEdit.EchoMode.Password)
         trans_layout.addRow("火山 App Key:", self._volc_key)
 
         baidu_cfg = settings.get("translate", "baidu", default={})
@@ -59,6 +61,7 @@ class SettingsWindow(QWidget):
 
         self._baidu_key = QLineEdit(baidu_cfg.get("app_key", ""))
         self._baidu_key.setPlaceholderText("留空则使用内置密钥")
+        self._baidu_key.setEchoMode(QLineEdit.EchoMode.Password)
         trans_layout.addRow("百度 App Key:", self._baidu_key)
 
         trans_group.setLayout(trans_layout)
@@ -99,8 +102,34 @@ class SettingsWindow(QWidget):
         self._anim_interval.setValue(settings.get("overlay", "animation_interval_ms", default=200))
         overlay_layout.addRow("动画刷新间隔:", self._anim_interval)
 
+        self._show_original = QCheckBox("显示原文")
+        self._show_original.setChecked(settings.get("overlay", "show_original", default=False))
+        overlay_layout.addRow("", self._show_original)
+
         overlay_group.setLayout(overlay_layout)
         layout.addWidget(overlay_group)
+
+        # Live preview
+        self._preview_label = QLabel("[Player] 集火天使\n    focus the mercy")
+        self._preview_label.setAlignment(Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignTop)
+        self._update_preview()
+        layout.addWidget(self._preview_label)
+
+        # Connect sliders to preview update
+        self._font_size.valueChanged.connect(self._update_preview)
+        self._opacity.valueChanged.connect(self._update_preview)
+
+        # Player blacklist
+        blacklist_group = QGroupBox("玩家屏蔽")
+        blacklist_layout = QVBoxLayout()
+        blacklist_layout.addWidget(QLabel("屏蔽的玩家名（每行一个）:"))
+        self._blacklist_edit = QPlainTextEdit()
+        self._blacklist_edit.setMaximumHeight(80)
+        blacklist = settings.get("general", "player_blacklist", default=[])
+        self._blacklist_edit.setPlainText("\n".join(blacklist))
+        blacklist_layout.addWidget(self._blacklist_edit)
+        blacklist_group.setLayout(blacklist_layout)
+        layout.addWidget(blacklist_group)
 
         btn_layout = QVBoxLayout()
         self._save_btn = QPushButton("保存")
@@ -116,6 +145,18 @@ class SettingsWindow(QWidget):
         layout.addLayout(btn_layout)
         self.setLayout(layout)
 
+    def _update_preview(self):
+        """Update the preview label with current settings."""
+        font_size = self._font_size.value()
+        opacity = self._opacity.value()
+        alpha = int(opacity * 255)
+        self._preview_label.setFont(QFont(FONT_FAMILY, font_size - 2))
+        self._preview_label.setStyleSheet(
+            f"color: rgba(0, 255, 0, {alpha});"
+            f"background-color: rgba(0, 0, 0, 150);"
+            f"padding: 4px; border-radius: 3px;"
+        )
+
     def _save(self):
         settings = get_settings()
         lang_map = {"中文": "zh", "English": "en", "日本語": "ja", "한국어": "ko"}
@@ -128,6 +169,9 @@ class SettingsWindow(QWidget):
             (("overlay", "max_messages"), self._max_msgs.value()),
             (("overlay", "overlay_height"), self._overlay_height.value()),
             (("overlay", "animation_interval_ms"), self._anim_interval.value()),
+            (("overlay", "show_original"), self._show_original.isChecked()),
+            (("general", "player_blacklist"),
+             [name.strip() for name in self._blacklist_edit.toPlainText().splitlines() if name.strip()]),
         ]
 
         if self._volc_id.text().strip():

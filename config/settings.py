@@ -33,6 +33,13 @@ class Settings:
             except (json.JSONDecodeError, PermissionError, OSError) as e:
                 logger.warning("Failed to load user config: %s, using defaults only", e)
 
+        # Record mtime so check_reload() doesn't re-trigger on the next poll
+        try:
+            if USER_CONFIG.exists():
+                self._last_mtime = USER_CONFIG.stat().st_mtime
+        except OSError:
+            pass
+
     def save(self):
         try:
             with open(USER_CONFIG, "w", encoding="utf-8") as f:

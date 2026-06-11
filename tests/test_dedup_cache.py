@@ -25,12 +25,14 @@ class TestDedupCache:
         assert self.cache.check_and_add("Player", "hello") is False
 
     def test_lru_eviction(self):
-        cache = DedupCache(max_size=3, ttl=60.0)
-        cache.check_and_add("P", "a")
-        cache.check_and_add("P", "b")
-        cache.check_and_add("P", "c")
-        cache.check_and_add("P", "d")
-        assert cache.check_and_add("P", "a") is False
+        cache = DedupCache(max_size=3, ttl=60.0, window_size=3)
+        cache.check_and_add("P", "aaaa")
+        cache.check_and_add("P", "bbbb")
+        cache.check_and_add("P", "cccc")
+        cache.check_and_add("P", "dddd")
+        # After 4 inserts with max_size=3, "aaaa" was evicted from exact cache.
+        # Sliding window now has bbbb, ccccc, dddd — "aaaa" is gone from both.
+        assert cache.check_and_add("P", "aaaa") is False
 
     def test_fuzzy_duplicate(self):
         cache = DedupCache(max_size=100, ttl=30.0, similarity_threshold=0.85)

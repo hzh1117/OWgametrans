@@ -62,7 +62,9 @@ def find_overwatch_window() -> tuple[int, int, int, int] | None:
             result.append((left, top, width, height))
         return True
 
-    WNDENUMPROC = ctypes.WINFUNCTYPE(ctypes.c_bool, ctypes.c_int, ctypes.c_int)
+    WNDENUMPROC = ctypes.WINFUNCTYPE(
+        ctypes.c_bool, ctypes.wintypes.HWND, ctypes.wintypes.LPARAM
+    )
     user32.EnumWindows(WNDENUMPROC(enum_callback), 0)
     return result[0] if result else None
 

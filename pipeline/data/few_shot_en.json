@@ -1,0 +1,684 @@
+[
+  {
+    "id": "en_001",
+    "source_lang": "en",
+    "source": "tracer diff go next",
+    "target_zh": "猎空差距 下一把",
+    "terms": [
+      "Tracer",
+      "diff"
+    ],
+    "tags": [
+      "slang",
+      "post-match"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_002",
+    "source_lang": "en",
+    "source": "tank diff gg",
+    "target_zh": "坦克差距 gg",
+    "terms": [
+      "tank",
+      "diff",
+      "gg"
+    ],
+    "tags": [
+      "slang",
+      "post-match"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_003",
+    "source_lang": "en",
+    "source": "switch to rein we need shield",
+    "target_zh": "换莱因哈特 我们需要盾",
+    "terms": [
+      "Reinhardt",
+      "shield"
+    ],
+    "tags": [
+      "strategy"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_004",
+    "source_lang": "en",
+    "source": "nano me nano me",
+    "target_zh": "给我激素 给我激素",
+    "terms": [
+      "Nanoboost"
+    ],
+    "tags": [
+      "ability"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_005",
+    "source_lang": "en",
+    "source": "nice shot",
+    "target_zh": "好枪",
+    "terms": [],
+    "tags": [
+      "reaction"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_006",
+    "source_lang": "en",
+    "source": "group up stop feeding",
+    "target_zh": "集合 别送了",
+    "terms": [
+      "feed"
+    ],
+    "tags": [
+      "strategy",
+      "slang"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_007",
+    "source_lang": "en",
+    "source": "heal me heal me",
+    "target_zh": "奶我 奶我",
+    "terms": [],
+    "tags": [
+      "phrase"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_008",
+    "source_lang": "en",
+    "source": "widow is carrying",
+    "target_zh": "黑百合在带飞",
+    "terms": [
+      "Widowmaker",
+      "carry"
+    ],
+    "tags": [
+      "hero",
+      "slang"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_009",
+    "source_lang": "en",
+    "source": "push now go go go",
+    "target_zh": "现在冲 冲冲冲",
+    "terms": [
+      "push"
+    ],
+    "tags": [
+      "strategy"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_010",
+    "source_lang": "en",
+    "source": "graves combo with blade",
+    "target_zh": "引力配合龙刃",
+    "terms": [
+      "Graviton Surge",
+      "Dragonblade"
+    ],
+    "tags": [
+      "ability",
+      "strategy"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_011",
+    "source_lang": "en",
+    "source": "ez",
+    "target_zh": "轻松",
+    "terms": [
+      "ez"
+    ],
+    "tags": [
+      "slang",
+      "post-match"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_012",
+    "source_lang": "en",
+    "source": "uninstall please",
+    "target_zh": "求你卸载吧",
+    "terms": [
+      "uninstall"
+    ],
+    "tags": [
+      "slang",
+      "toxic"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_013",
+    "source_lang": "en",
+    "source": "genji is flanking",
+    "target_zh": "源氏在绕后",
+    "terms": [
+      "Genji",
+      "flanking"
+    ],
+    "tags": [
+      "hero",
+      "callout"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_014",
+    "source_lang": "en",
+    "source": "they have ult",
+    "target_zh": "他们有大",
+    "terms": [],
+    "tags": [
+      "callout"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_015",
+    "source_lang": "en",
+    "source": "focus the mercy",
+    "target_zh": "集火天使",
+    "terms": [
+      "Mercy",
+      "focus"
+    ],
+    "tags": [
+      "hero",
+      "strategy"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_016",
+    "source_lang": "en",
+    "source": "one one one",
+    "target_zh": "就一个就一个",
+    "terms": [
+      "one"
+    ],
+    "tags": [
+      "callout"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_017",
+    "source_lang": "en",
+    "source": "lamp down push",
+    "target_zh": "灯倒了 冲",
+    "terms": [
+      "lamp down",
+      "push"
+    ],
+    "tags": [
+      "ability",
+      "strategy"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_018",
+    "source_lang": "en",
+    "source": "dps diff gg",
+    "target_zh": "输出差距 gg",
+    "terms": [
+      "dps diff",
+      "gg"
+    ],
+    "tags": [
+      "slang",
+      "post-match"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_019",
+    "source_lang": "en",
+    "source": "high ground take high ground",
+    "target_zh": "高台 抢高台",
+    "terms": [
+      "high ground"
+    ],
+    "tags": [
+      "strategy"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_020",
+    "source_lang": "en",
+    "source": "play safe wait for team",
+    "target_zh": "稳一点 等队友",
+    "terms": [
+      "play safe"
+    ],
+    "tags": [
+      "strategy"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_021",
+    "source_lang": "en",
+    "source": "dont peek widow",
+    "target_zh": "别露头 有黑百合",
+    "terms": [
+      "dont peek",
+      "Widowmaker"
+    ],
+    "tags": [
+      "callout"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_022",
+    "source_lang": "en",
+    "source": "mercy low go kill her",
+    "target_zh": "天使残血 去杀她",
+    "terms": [
+      "Mercy",
+      "low"
+    ],
+    "tags": [
+      "callout"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_023",
+    "source_lang": "en",
+    "source": "slept the genji",
+    "target_zh": "睡了源氏",
+    "terms": [
+      "slept",
+      "Genji"
+    ],
+    "tags": [
+      "ability"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_024",
+    "source_lang": "en",
+    "source": "regroup dont stagger",
+    "target_zh": "重新集合 别送",
+    "terms": [
+      "regroup"
+    ],
+    "tags": [
+      "strategy"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_025",
+    "source_lang": "en",
+    "source": "cracked aim",
+    "target_zh": "枪太准了",
+    "terms": [
+      "cracked"
+    ],
+    "tags": [
+      "slang"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_026",
+    "source_lang": "en",
+    "source": "fall back fall back",
+    "target_zh": "后撤 后撤",
+    "terms": [
+      "fall back"
+    ],
+    "tags": [
+      "strategy"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_027",
+    "source_lang": "en",
+    "source": "zarya has grav",
+    "target_zh": "查莉娅有引力",
+    "terms": [
+      "Zarya",
+      "grav"
+    ],
+    "tags": [
+      "callout",
+      "ability"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_028",
+    "source_lang": "en",
+    "source": "im tilted",
+    "target_zh": "我上头了",
+    "terms": [
+      "tilted"
+    ],
+    "tags": [
+      "slang"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_029",
+    "source_lang": "en",
+    "source": "nice clutch",
+    "target_zh": "漂亮 翻盘了",
+    "terms": [
+      "clutch"
+    ],
+    "tags": [
+      "slang",
+      "reaction"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_030",
+    "source_lang": "en",
+    "source": "peel for me peel",
+    "target_zh": "帮我拆一下 帮我",
+    "terms": [
+      "peel"
+    ],
+    "tags": [
+      "phrase"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_031",
+    "source_lang": "en",
+    "source": "boosted player",
+    "target_zh": "被带上来的",
+    "terms": [
+      "boosted"
+    ],
+    "tags": [
+      "slang",
+      "toxic"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_032",
+    "source_lang": "en",
+    "source": "widow sightline dont go there",
+    "target_zh": "黑百合视线 别过去",
+    "terms": [
+      "widow sightline"
+    ],
+    "tags": [
+      "callout"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_033",
+    "source_lang": "en",
+    "source": "c9 omg",
+    "target_zh": "C9了 我的天",
+    "terms": [
+      "c9"
+    ],
+    "tags": [
+      "slang",
+      "reaction"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_034",
+    "source_lang": "en",
+    "source": "point A take it",
+    "target_zh": "A点 占",
+    "terms": [
+      "point A"
+    ],
+    "tags": [
+      "strategy"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_035",
+    "source_lang": "en",
+    "source": "hardstuck diamond",
+    "target_zh": "卡钻石了",
+    "terms": [
+      "hardstuck"
+    ],
+    "tags": [
+      "slang"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_036",
+    "source_lang": "en",
+    "source": "ana anti them",
+    "target_zh": "安娜禁疗他们",
+    "terms": [
+      "Ana",
+      "anti"
+    ],
+    "tags": [
+      "hero",
+      "ability"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_037",
+    "source_lang": "en",
+    "source": "go in go in",
+    "target_zh": "冲 冲",
+    "terms": [
+      "go in"
+    ],
+    "tags": [
+      "strategy"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_038",
+    "source_lang": "en",
+    "source": "lucio beat incoming",
+    "target_zh": "卢西奥要开音障了",
+    "terms": [
+      "Lucio",
+      "beat"
+    ],
+    "tags": [
+      "hero",
+      "ability"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_039",
+    "source_lang": "en",
+    "source": "smurf on the other team",
+    "target_zh": "对面有炸鱼的",
+    "terms": [
+      "smurf"
+    ],
+    "tags": [
+      "slang"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_040",
+    "source_lang": "en",
+    "source": "nice grav nice grav",
+    "target_zh": "好引力 好引力",
+    "terms": [
+      "grav"
+    ],
+    "tags": [
+      "ability",
+      "reaction"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_041",
+    "source_lang": "en",
+    "source": "backcap backcap",
+    "target_zh": "偷点 偷点",
+    "terms": [
+      "backcap"
+    ],
+    "tags": [
+      "mode"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_042",
+    "source_lang": "en",
+    "source": "flanking behind us",
+    "target_zh": "有人绕后",
+    "terms": [
+      "flanking"
+    ],
+    "tags": [
+      "callout"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_043",
+    "source_lang": "en",
+    "source": "swap off genji",
+    "target_zh": "换掉源氏",
+    "terms": [
+      "swap",
+      "Genji"
+    ],
+    "tags": [
+      "hero",
+      "strategy"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_044",
+    "source_lang": "en",
+    "source": "no ult no ult",
+    "target_zh": "没有大 没有大",
+    "terms": [
+      "no ult"
+    ],
+    "tags": [
+      "callout"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_045",
+    "source_lang": "en",
+    "source": "combo ult combo",
+    "target_zh": "大招配合 配合",
+    "terms": [
+      "combo ult"
+    ],
+    "tags": [
+      "strategy"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_046",
+    "source_lang": "en",
+    "source": "im pocketing you",
+    "target_zh": "我跟定你了",
+    "terms": [
+      "pocketing"
+    ],
+    "tags": [
+      "slang"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_047",
+    "source_lang": "en",
+    "source": "deranking gg",
+    "target_zh": "掉分了 gg",
+    "terms": [
+      "derank",
+      "gg"
+    ],
+    "tags": [
+      "slang",
+      "post-match"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_048",
+    "source_lang": "en",
+    "source": "behind behind",
+    "target_zh": "后面 后面",
+    "terms": [
+      "behind"
+    ],
+    "tags": [
+      "callout"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_049",
+    "source_lang": "en",
+    "source": "on me on me",
+    "target_zh": "在我这 在我这",
+    "terms": [
+      "on me"
+    ],
+    "tags": [
+      "callout"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "en_050",
+    "source_lang": "en",
+    "source": "gg close game",
+    "target_zh": "gg 好局",
+    "terms": [
+      "gg"
+    ],
+    "tags": [
+      "post-match"
+    ],
+    "quality": "curated"
+  }
+]

@@ -1,0 +1,355 @@
+[
+  {
+    "id": "ko_001",
+    "source_lang": "ko",
+    "source": "힐줘 힐줘",
+    "target_zh": "奶我 奶我",
+    "terms": [
+      "힐줘"
+    ],
+    "tags": [
+      "phrase"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ko_002",
+    "source_lang": "ko",
+    "source": "모여 모여",
+    "target_zh": "集合 集合",
+    "terms": [
+      "모여"
+    ],
+    "tags": [
+      "strategy"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ko_003",
+    "source_lang": "ko",
+    "source": "밀어 밀어",
+    "target_zh": "推 推",
+    "terms": [
+      "밀어"
+    ],
+    "tags": [
+      "strategy"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ko_004",
+    "source_lang": "ko",
+    "source": "트레이서 교체해",
+    "target_zh": "换猎空",
+    "terms": [
+      "트레이서",
+      "교체"
+    ],
+    "tags": [
+      "hero",
+      "strategy"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ko_005",
+    "source_lang": "ko",
+    "source": "겐지 뒤에서",
+    "target_zh": "源氏在后面",
+    "terms": [
+      "겐지"
+    ],
+    "tags": [
+      "callout"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ko_006",
+    "source_lang": "ko",
+    "source": "메르시 잡아",
+    "target_zh": "杀天使",
+    "terms": [
+      "메르시"
+    ],
+    "tags": [
+      "callout"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ko_007",
+    "source_lang": "ko",
+    "source": "아나 안티 맞았다",
+    "target_zh": "被安娜禁疗了",
+    "terms": [
+      "아나"
+    ],
+    "tags": [
+      "callout"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ko_008",
+    "source_lang": "ko",
+    "source": "디바 봄",
+    "target_zh": "D.Va炸弹",
+    "terms": [
+      "디바"
+    ],
+    "tags": [
+      "ability"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ko_009",
+    "source_lang": "ko",
+    "source": "루시우 비트",
+    "target_zh": "卢西奥音障",
+    "terms": [
+      "루시우"
+    ],
+    "tags": [
+      "ability"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ko_010",
+    "source_lang": "ko",
+    "source": "라인하르트 쉴드 없어",
+    "target_zh": "莱因哈特没盾了",
+    "terms": [
+      "라인하르트"
+    ],
+    "tags": [
+      "callout"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ko_011",
+    "source_lang": "ko",
+    "source": "뒤로 빠져",
+    "target_zh": "后撤",
+    "terms": [
+      "뒤로"
+    ],
+    "tags": [
+      "strategy"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ko_012",
+    "source_lang": "ko",
+    "source": "윈스턴 점프",
+    "target_zh": "温斯顿跳了",
+    "terms": [
+      "윈스턴"
+    ],
+    "tags": [
+      "callout"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ko_013",
+    "source_lang": "ko",
+    "source": " 자리아 그라브",
+    "target_zh": "查莉娅引力",
+    "terms": [
+      "자리아"
+    ],
+    "tags": [
+      "ability"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ko_014",
+    "source_lang": "ko",
+    "source": "위도우 조심",
+    "target_zh": "小心黑百合",
+    "terms": [
+      "위도우"
+    ],
+    "tags": [
+      "callout"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ko_015",
+    "source_lang": "ko",
+    "source": "리퍼 뒤에",
+    "target_zh": "死神在后面",
+    "terms": [
+      "리퍼"
+    ],
+    "tags": [
+      "callout"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ko_016",
+    "source_lang": "ko",
+    "source": "캐서디 하이눈",
+    "target_zh": "卡西迪午时已到",
+    "terms": [
+      "캐서디"
+    ],
+    "tags": [
+      "ability"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ko_017",
+    "source_lang": "ko",
+    "source": "솔저 태크",
+    "target_zh": "士兵76目镜",
+    "terms": [
+      "솔저"
+    ],
+    "tags": [
+      "ability"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ko_018",
+    "source_lang": "ko",
+    "source": "모이라 코알",
+    "target_zh": "莫伊拉聚合射线",
+    "terms": [
+      "모이라"
+    ],
+    "tags": [
+      "ability"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ko_019",
+    "source_lang": "ko",
+    "source": "키리코 키츠네",
+    "target_zh": "雾子狐神",
+    "terms": [
+      "키리코"
+    ],
+    "tags": [
+      "ability"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ko_020",
+    "source_lang": "ko",
+    "source": "둠피스트 메테",
+    "target_zh": "末日铁拳流星锤",
+    "terms": [
+      "둠피스트"
+    ],
+    "tags": [
+      "ability"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ko_021",
+    "source_lang": "ko",
+    "source": "파라 포화",
+    "target_zh": "法老之鹰弹幕",
+    "terms": [
+      "파라"
+    ],
+    "tags": [
+      "ability"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ko_022",
+    "source_lang": "ko",
+    "source": "정크랫 타이어",
+    "target_zh": "狂鼠轮胎",
+    "terms": [
+      "정크랫"
+    ],
+    "tags": [
+      "ability"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ko_023",
+    "source_lang": "ko",
+    "source": "토르비른 몰트코어",
+    "target_zh": "托比昂熔火核心",
+    "terms": [
+      "토르비른"
+    ],
+    "tags": [
+      "ability"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ko_024",
+    "source_lang": "ko",
+    "source": "시그마 플럭스",
+    "target_zh": "西格玛引力流",
+    "terms": [
+      "시그마"
+    ],
+    "tags": [
+      "ability"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ko_025",
+    "source_lang": "ko",
+    "source": "한조 용",
+    "target_zh": "半藏龙",
+    "terms": [
+      "한조"
+    ],
+    "tags": [
+      "ability"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ko_026",
+    "source_lang": "ko",
+    "source": "차이 차이",
+    "target_zh": "差距 差距",
+    "terms": [
+      "차이"
+    ],
+    "tags": [
+      "slang"
+    ],
+    "quality": "curated"
+  },
+  {
+    "id": "ko_027",
+    "source_lang": "ko",
+    "source": "힐줘 제발",
+    "target_zh": "奶我 求你了",
+    "terms": [
+      "힐줘"
+    ],
+    "tags": [
+      "phrase"
+    ],
+    "quality": "curated"
+  }
+]
